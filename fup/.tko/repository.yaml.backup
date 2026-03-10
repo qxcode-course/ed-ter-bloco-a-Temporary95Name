@@ -14,7 +14,9 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@side-quests
+- ed@análise
+- ed@árvore
+- ed@main-quest
 tasks: {}
 flags:
   painel: 0
@@ -24,4 +26,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@pilha-e-fila
+selected: ed@https://github.com/qxcodepoo/arcade/blob/master/base/manipulacao/README.md
