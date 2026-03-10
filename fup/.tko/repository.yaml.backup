@@ -1,27 +1,27 @@
 version: '0.2'
 sources:
-- alias: sandbox
+- name: sandbox
   target: sandbox
   type: local
   writeable: true
-  filters: null
-- alias: fup
-  target: https://github.com/qxcodefup/arcade.git
+  quests: null
+  tasks: null
+- name: ed
+  target: https://github.com/qxcodeed/arcade.git
   type: git
   writeable: false
-  cache_timestamp: '2026-03-05 14:19:31'
-  filters: null
+  cache_timestamp: '2026-03-10 13:48:33'
+  quests: null
+  tasks: null
 expanded:
-- fup@campanha-principal
-- fup@problemas-operações
-- fup@jogos-em-modo-texto
+- ed@side-quests
 tasks: {}
 flags:
-  painel: 2
-  quests: 2
-  tracks: 1
+  painel: 0
+  quests: 0
+  tracks: 0
   tasks: 0
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: fup@campanha-principal
+selected: ed@pilha-e-fila
