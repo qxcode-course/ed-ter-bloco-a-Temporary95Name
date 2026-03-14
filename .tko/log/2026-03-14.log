@@ -1,0 +1,27 @@
+2026-03-14 01:11:28, MOVE, v:1, k:ed@sufixos, mode:PICK
+2026-03-14 01:11:51, MOVE, v:1, k:ed@sufixos, mode:BACK
+2026-03-14 01:11:52, MOVE, v:1, k:ed@padroes1, mode:PICK
+2026-03-14 01:12:40, MOVE, v:1, k:ed@padroes1, mode:BACK
+2026-03-14 01:12:43, MOVE, v:1, k:ed@padroes2, mode:PICK
+2026-03-14 01:12:46, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:5
+2026-03-14 01:12:46, MOVE, v:1, k:ed@padroes2, mode:BACK
+2026-03-14 01:12:48, MOVE, v:1, k:ed@padroes2, mode:PICK
+2026-03-14 01:13:13, MOVE, v:1, k:ed@padroes2, mode:BACK
+2026-03-14 01:13:14, MOVE, v:1, k:ed@padroes3, mode:PICK
+2026-03-14 01:13:45, MOVE, v:1, k:ed@padroes3, mode:BACK
+2026-03-14 01:13:49, MOVE, v:1, k:ed@quadrado, mode:PICK
+2026-03-14 01:14:18, MOVE, v:1, k:ed@quadrado, mode:BACK
+2026-03-14 01:14:20, MOVE, v:1, k:ed@fib1, mode:PICK
+2026-03-14 01:14:44, MOVE, v:1, k:ed@fib1, mode:BACK
+2026-03-14 01:14:53, MOVE, v:1, k:ed@fib2, mode:PICK
+2026-03-14 01:15:16, MOVE, v:1, k:ed@fib2, mode:BACK
+2026-03-14 01:15:18, MOVE, v:1, k:ed@santo, mode:PICK
+2026-03-14 01:15:46, MOVE, v:1, k:ed@santo, mode:BACK
+2026-03-14 01:15:47, MOVE, v:1, k:ed@bitcoin, mode:PICK
+2026-03-14 01:16:10, MOVE, v:1, k:ed@bitcoin, mode:BACK
+2026-03-14 01:16:48, MOVE, v:1, k:ed@balanceada, mode:PICK
+2026-03-14 01:17:23, MOVE, v:1, k:ed@balanceada, mode:BACK
+2026-03-14 01:17:33, MOVE, v:1, k:ed@caminhao, mode:PICK
+2026-03-14 01:17:53, MOVE, v:1, k:ed@caminhao, mode:BACK
+2026-03-14 01:17:55, MOVE, v:1, k:ed@polonesa, mode:PICK
+2026-03-14 01:18:17, MOVE, v:1, k:ed@polonesa, mode:BACK
