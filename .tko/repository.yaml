@@ -15,8 +15,8 @@ sources:
   tasks: null
 expanded:
 - ed@main-quest
-- ed@revisão
 - ed@side-quests
+- ed@revisão
 tasks:
   ed@pintando: '{rate:100}'
   ed@mumia: '{rate:100}'
@@ -28,4 +28,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@mumia
+selected: ed@pedra
