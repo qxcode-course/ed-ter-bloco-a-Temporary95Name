@@ -1,0 +1,124 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_00-50-37",
+            "content": "@@ -10,473 +10,59 @@\n ain%0A\n-%0A\n import \n-(%0A    \n %22fmt%22%0A\n-    %22math%22%0A)%0A%0Afunc main() %7B%0A%09var a float64%0A%09var b float64%0A%09var c float64%0A    var p float64%0A%0A%0A    _, err := fmt.Scanln(&a)%0A    if err != nil %7B%0A        fmt.Println(%22Error%22)%0A%0A    %7D%0A%0A%0A    _, err = fmt.Scanln(&b)%0A    if err != nil %7B%0A        fmt.Println(%22Error%22)%0A%0A    %7D%0A%0A%0A    _, err = fmt.Scanln(&c)%0A    if err != nil %7B%0A        fmt.Println(%22Error%22)%0A    %7D%0A%0A%0A    p = (a + b + c) / 2%0A    %0A    fmt.Printf(%22%25f%5Cn%22, math.Sqrt(p * (p - a) * (p - b) * (p * c))\n+func main() %7B%0A    fmt.Println(%22qxcode%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-15_01-28-23",
+            "content": "@@ -427,10 +427,8 @@\n f(%22%25\n-.2\n f%5Cn%22\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-15_01-28-34",
+            "content": "@@ -409,54 +409,9 @@\n     \n-area := (p * (p - a) * (p - b) * (p * c))%0A    \n+%0A\n     \n@@ -445,12 +445,39 @@\n qrt(\n-area\n+p * (p - a) * (p - b) * (p * c)\n ))%0A%7D\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-15_01-31-13",
+            "content": "@@ -385,16 +385,17 @@\n     p = \n+(\n a + b + \n@@ -395,16 +395,17 @@\n  + b + c\n+)\n  / 2%0A   \n@@ -451,17 +451,16 @@\n c))%0A    \n-%0A\n     fmt.\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-15_01-31-47",
+            "content": "@@ -385,17 +385,16 @@\n     p = \n-(\n a + b + \n@@ -398,17 +398,16 @@\n  + c / 2\n-)\n %0A    are\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-15_01-31-57",
+            "content": "@@ -384,11 +384,8 @@\n %0A   \n- /*\n  p =\n@@ -497,42 +497,7 @@\n ea))\n- */%0A    fmt.Printf(%22%25f%22, a * b * c)\n %0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-15_01-33-32",
+            "content": "@@ -106,11 +106,8 @@\n %0A   \n- //\n  var\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-15_01-33-41",
+            "content": "@@ -29,19 +29,16 @@\n fmt%22%0A   \n- //\n  %22math%22%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-15_01-33-59",
+            "content": "@@ -529,19 +529,19 @@\n %22%25f%22, a \n-+ b +\n+* b *\n  c)%0A%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-15_01-34-27",
+            "content": "@@ -29,16 +29,19 @@\n fmt%22%0A   \n+ //\n  %22math%22%0A\n@@ -105,16 +105,19 @@\n at64%0A   \n+ //\n  var p f\n@@ -390,20 +390,31 @@\n %0A   \n+ /*\n  p = \n-a+b+c/2\n+(a + b + c / 2)\n %0A   \n@@ -422,16 +422,17 @@\n area := \n+(\n p * (p -\n@@ -454,16 +454,17 @@\n  (p * c)\n+)\n %0A    %0A  \n@@ -502,23 +502,23 @@\n t(area))\n+ */\n %0A   \n- //\n  fmt.Pri\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-15_01-35-49",
+            "content": "@@ -397,127 +397,11 @@\n c/2%0A\n-%0A\n    \n- pMenosA := p - a%0A    pMenosB := p - b%0A    pMenosC := p - c%0A    area := p * pMenosA * pMenosB * pMenosC%0A    %0A    //\n  are\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-15_01-38-06",
+            "content": "@@ -556,42 +556,8 @@\n * c)\n-%0A%0A    resultado := math.Sqrt(area)\n %0A   \n@@ -587,17 +587,23 @@\n n%22, \n-resultado\n+math.Sqrt(area)\n )%0A  \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-15_01-39-10",
+            "content": "@@ -389,15 +389,13 @@\n p = \n-(\n a+b+c\n-)\n /2%0A%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-15_01-39-39",
+            "content": "@@ -395,27 +395,24 @@\n +b+c)/2%0A%0A   \n- //\n  pMenosA := \n@@ -416,27 +416,24 @@\n := p - a%0A   \n- //\n  pMenosB := \n@@ -441,19 +441,16 @@\n  - b%0A   \n- //\n  pMenosC\n@@ -462,19 +462,16 @@\n  - c%0A   \n- //\n  area :=\n@@ -507,24 +507,27 @@\n osC%0A    %0A   \n+ //\n  area := p *\n@@ -559,19 +559,16 @@\n  c)%0A%0A   \n- //\n  resulta\n@@ -619,31 +619,25 @@\n .2f%5Cn%22, \n-math.Sqrt(area)\n+resultado\n )%0A    //\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-15_01-40-33",
+            "content": "@@ -559,17 +559,17 @@\n b) * (p \n--\n+*\n  c)%0A%0A   \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-15_01-40-46",
+            "content": "@@ -121,29 +121,8 @@\n t64%0A\n-    var area float64%0A\n %0A%0A  \n@@ -389,13 +389,15 @@\n p = \n+(\n a+b+c\n+)\n /2%0A%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-15_01-41-09",
+            "content": "@@ -548,16 +548,17 @@\n    area \n+:\n = p * (p\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-15_01-41-16",
+            "content": "@@ -410,15 +410,13 @@\n p = \n-(\n a+b+c\n-)\n /2%0A%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-15_01-41-27",
+            "content": "@@ -540,27 +540,24 @@\n osC%0A    %0A   \n- //\n  area = p * \n@@ -665,39 +665,12 @@\n qrt(\n-p * (p - a) * (p - b) * (p - c)\n+area\n ))%0A \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-15_01-41-47",
+            "content": "@@ -120,19 +120,16 @@\n at64%0A   \n- //\n  var are\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-15_01-41-56",
+            "content": "@@ -420,16 +420,140 @@\n b+c)/2%0A%0A\n+    // pMenosA := p - a%0A    // pMenosB := p - b%0A    // pMenosC := p - c%0A    // area := p * pMenosA * pMenosB * pMenosC%0A    %0A\n     // a\n@@ -595,23 +595,56 @@\n c)%0A%0A    \n+// resultado := math.Sqrt(area)\n %0A    \n-//\n+%0A   \n  fmt.Pri\n@@ -700,24 +700,27 @@\n p - c)))%0A   \n+ //\n  fmt.Printf(\n@@ -725,98 +725,21 @@\n f(%22%25\n-.2f%5Cn%22, math.Sqrt(((a+b+c)/2) * (((a+b+c)/2) - a) * (((a+b+c)/2) - b) * (((a+b+c)/2) - c))\n+f%22, a + b + c\n )%0A%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-15_01-43-15",
+            "content": "@@ -98,27 +98,24 @@\n  float64%0A   \n- //\n  var p float\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-15_01-43-23",
+            "content": "@@ -407,19 +407,16 @@\n  %7D%0A%0A%0A   \n- //\n  p = (a+\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-15_01-43-30",
+            "content": "package main\n\nimport (\n    \"fmt\"\n    \"math\"\n)\n\nfunc main() {\n\tvar a float64\n\tvar b float64\n\tvar c float64\n    // var p float64\n    // var area float64\n\n\n    _, err := fmt.Scanln(&a)\n    if err != nil {\n        fmt.Println(\"Error\")\n\n    }\n\n\n    _, err = fmt.Scanln(&b)\n    if err != nil {\n        fmt.Println(\"Error\")\n\n    }\n\n\n    _, err = fmt.Scanln(&c)\n    if err != nil {\n        fmt.Println(\"Error\")\n    }\n\n\n    // p = (a+b+c)/2\n\n    // area = p * (p - a) * (p - b) * (p - c)\n\n    \n    // fmt.Printf(\"%.2f\\n\", math.Sqrt(p * (p - a) * (p - b) * (p - c)))\n    fmt.Printf(\"%.2f\\n\", math.Sqrt(((a+b+c)/2) * (((a+b+c)/2) - a) * (((a+b+c)/2) - b) * (((a+b+c)/2) - c)))\n}\n",
+            "lines": "43"
+        }
+    ]
+}

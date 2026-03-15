@@ -1,0 +1,36 @@
+2026-03-15 00:46:02, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-15 00:49:59, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-15 00:50:37, EXEC, v:1, k:ed@pintando, mode:FREE, size:5
+2026-03-15 00:50:48, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-15 00:50:50, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-15 00:52:48, EXEC, v:1, k:ed@pintando, mode:FREE
+2026-03-15 00:53:28, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-15 00:53:58, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-15 00:57:46, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-15 01:28:23, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:38
+2026-03-15 01:28:34, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:38
+2026-03-15 01:31:13, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:38
+2026-03-15 01:31:47, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:39
+2026-03-15 01:31:57, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:39
+2026-03-15 01:33:32, EXEC, v:1, k:ed@pintando, mode:FULL, size:40, fail:COMP
+2026-03-15 01:33:41, EXEC, v:1, k:ed@pintando, mode:FULL, size:40, fail:COMP
+2026-03-15 01:33:49, EXEC, v:1, k:ed@pintando, mode:FULL, fail:COMP
+2026-03-15 01:33:59, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:40
+2026-03-15 01:34:27, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:40
+2026-03-15 01:35:49, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:40
+2026-03-15 01:38:06, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:46
+2026-03-15 01:39:10, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:48
+2026-03-15 01:39:12, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0
+2026-03-15 01:39:39, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100, size:48
+2026-03-15 01:40:33, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:48
+2026-03-15 01:40:46, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100, size:48
+2026-03-15 01:41:09, EXEC, v:1, k:ed@pintando, mode:FULL, size:49, fail:COMP
+2026-03-15 01:41:16, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:49
+2026-03-15 01:41:27, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100, size:49
+2026-03-15 01:41:47, EXEC, v:1, k:ed@pintando, mode:FULL, size:49, fail:COMP
+2026-03-15 01:41:56, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100, size:49
+2026-03-15 01:43:15, EXEC, v:1, k:ed@pintando, mode:FULL, size:43, fail:COMP
+2026-03-15 01:43:23, EXEC, v:1, k:ed@pintando, mode:FULL, size:43, fail:COMP
+2026-03-15 01:43:31, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100, size:43
+2026-03-15 01:43:49, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100
+2026-03-15 01:43:51, MOVE, v:1, k:ed@pintando, mode:BACK
