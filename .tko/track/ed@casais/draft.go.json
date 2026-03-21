@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-21_16-49-56",
+            "content": "@@ -89,109 +89,479 @@\n t%22%0A%0A\n-func main() %7B%0A%09qtd := 0%0A%09fmt.Scan(&qtd)%0A%09animais := make(%5B%5Dint, qtd)%0A%09%0A%09solteiros := make(map%5Bint%5Dint\n+type Jogada struct %7B%0A%09pa, pb int%0A%7D%0A%0Afunc pontuacao(j Jogada) int %7B%0A%09if j.pa %3E j.pb %7B%0A%09%09return j.pa - j.pb%0A%09%7D%0A%09return j.pb - j.pa%0A%7D%0A%0Afunc procurar_melhor(jogadas %5B%5DJogada) int %7B%0A%09ind_melhor := -1%0A%09for i, jog := range jogadas %7B%0A%09%09if jog.pa %3C 10 %7C%7C jog.pb %3C 10 %7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09if ind_melhor == -1 %7C%7C (pontuacao(jog) %3C pontuacao(jogadas%5Bind_melhor%5D)) %7B%0A%09%09%09ind_melhor = i%0A%09%09%7D %0A%09%7D%0A%09return ind_melhor%0A%7D%0A%0Afunc main() %7B%0A%09qtd := 0%0A%09fmt.Scan(&qtd)%0A%09jogadas := make(%5B%5DJogada, qtd\n )%0A%09f\n@@ -570,31 +570,27 @@\n  i := range \n-animais\n+qtd\n  %7B%0A%09%09fmt.Sca\n@@ -596,51 +596,71 @@\n an(&\n-animai\n+jogadas%5Bi%5D.pa, &jogada\n s%5Bi%5D\n+.pb\n )%0A%09%7D%0A%09\n-n_pares\n+ind_melhor\n  := \n-0\n+-1\n %0A%09for \n-_, animal\n+i, jog\n  := \n@@ -669,14 +669,14 @@\n nge \n-animai\n+jogada\n s %7B%0A\n@@ -684,130 +684,244 @@\n %09if \n-solteiros%5B-animal%5D %3E 0 %7B%0A%09%09%09solteiros%5B-animal%5D--%0A%09%09%09n_pares++%0A%09%09%7D else %7B%0A%09%09%09solteiros%5Banimal%5D++%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(n_pares)\n+jog.pa %3C 10 %7C%7C jog.pb %3C 10 %7B%0A%09%09%09continue%0A%09%09%7D%0A%09%09if ind_melhor == -1 %7C%7C (pontuacao(jog) %3C pontuacao(jogadas%5Bind_melhor%5D)) %7B%0A%09%09%09ind_melhor = i%0A%09%09%7D%0A%09%7D%0A%09if ind_melhor == -1 %7B%0A%09%09fmt.Println(%22sem ganhador%22)%0A%09%7D else %7B%0A%09%09fmt.Println(ind_melhor)%0A%09%7D\n %0A%7D\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-21_16-51-25",
+            "content": "@@ -154,16 +154,17 @@\n t, qtd)%0A\n+%09\n %0A%09soltei\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-21_16-57-00",
+            "content": "// C\u00f3digo feito e respondido pelo professor 18 de Mar\u00e7o de 2026\npackage main\n\nimport \"fmt\"\n\nfunc main() {\n\tqtd := 0\n\tfmt.Scan(&qtd)\n\tanimais := make([]int, qtd)\n\n\tsolteiros := make(map[int]int)\n\tfor i := range animais {\n\t\tfmt.Scan(&animais[i])\n\t}\n\tn_pares := 0\n\tfor _, animal := range animais {\n\t\tif solteiros[-animal] > 0 {\n\t\t\tsolteiros[-animal]--\n\t\t\tn_pares++\n\t\t} else {\n\t\t\tsolteiros[animal]++\n\t\t}\n\t}\n\tfmt.Println(n_pares)\n}",
+            "lines": "25"
+        }
+    ]
+}
