@@ -1,140 +1,71 @@
-/*
+// Resposta feita por máquina - 21 de Março de 2026
 package main
 
 import (
-
-	"fmt"
-
+	"fmt"     // Package for formatted I/O (Input/Output)
+	"strconv" // Package for conversions to/from string
+	"strings" // Package for string manipulation like Join
 )
 
-	func main() {
-		var totalAlbum, qtdPossui int
+// FindDuplicates extracts repeated values from the collection
+func FindDuplicates(stickers []int) []int {
+	counts := make(map[int]int) // Map to track how many times each ID appears
+	var duplicates []int        // Slice to store the results
 
-		// Lendo as configurações iniciais
-		if _, err := fmt.Scan(&totalAlbum); err != nil {
-			return
+	for _, s := range stickers { // Loop through every sticker owned
+		if counts[s] > 0 { // If ID was already seen at least once...
+			duplicates = append(duplicates, s) // ...add it to the duplicates list
 		}
-		if _, err := fmt.Scan(&qtdPossui); err != nil {
-			return
-		}
-
-		possui := make([]int, qtdPossui)
-		contagem := make(map[int]int)
-		var repetidas []int
-
-		// Lendo as figurinhas e identificando as repetidas
-		for i := 0; i < qtdPossui; i++ {
-			fmt.Scan(&possui[i])
-			num := possui[i]
-
-			// Se já vimos esse número antes, ele é uma repetida
-			if contagem[num] > 0 {
-				repetidas = append(repetidas, num)
-			}
-			contagem[num]++
-		}
-
-		// 1. Saída das Repetidas
-		if len(repetidas) > 0 {
-			for i, v := range repetidas {
-				fmt.Print(v)
-				if i < len(repetidas)-1 {
-					fmt.Print(" ")
-				}
-			}
-			fmt.Println()
-		} else {
-			fmt.Println("N")
-		}
-
-		// 2. Identificando as Faltantes
-		var faltantes []int
-		for i := 1; i <= totalAlbum; i++ {
-			// Se o número não está no nosso mapa de contagem, está faltando
-			if contagem[i] == 0 {
-				faltantes = append(faltantes, i)
-			}
-		}
-
-		// Saída das Faltantes
-		if len(faltantes) > 0 {
-			for i, v := range faltantes {
-				fmt.Print(v)
-				if i < len(faltantes)-1 {
-					fmt.Print(" ")
-				}
-			}
-			fmt.Println()
-		} else {
-			fmt.Println("N")
-		}
+		counts[s]++ // Increment the count for this sticker ID
 	}
-*/
-package main
-
-import (
-	"fmt"
-	"strings"
-)
-
-// 1. Função para identificar figurinhas repetidas
-func buscarRepetidas(possuidas []int) []int {
-	contagem := make(map[int]int)
-	var repetidas []int
-
-	for _, num := range possuidas {
-		if contagem[num] > 0 {
-			repetidas = append(repetidas, num)
-		}
-		contagem[num]++
-	}
-	return repetidas
+	return duplicates // Return the list of extra stickers
 }
 
-// 2. Função para identificar quais estão faltando
-func buscarFaltantes(totalAlbum int, possuidas []int) []int {
-	// Transformamos em map para busca O(1)
-	mapPossui := make(map[int]bool)
-	for _, num := range possuidas {
-		mapPossui[num] = true
+// FindMissing identifies gaps in the collection based on album size
+func FindMissing(total int, owned []int) []int {
+	ownedMap := make(map[int]bool) // Map for O(1) time complexity lookups
+	for _, s := range owned {      // Iterate through the owned stickers
+		ownedMap[s] = true // Mark this sticker ID as "possessed"
 	}
 
-	var faltantes []int
-	for i := 1; i <= totalAlbum; i++ {
-		if !mapPossui[i] {
-			faltantes = append(faltantes, i)
+	var missing []int                // Slice to store IDs not found
+	for i := 1; i <= total; i++ {    // Iterate from 1 up to the album total
+		if !ownedMap[i] { // If the ID is NOT in our "possessed" map...
+			missing = append(missing, i) // ...add it to the missing list
 		}
 	}
-	return faltantes
+	return missing // Return all IDs needed to finish the album
 }
 
-// 3. Função auxiliar para formatar a saída conforme o requisito (N se vazio)
-func formatarSaida(lista []int) string {
-	if len(lista) == 0 {
-		return "N"
+// FormatOutput converts a slice to a string or returns "N"
+func FormatOutput(list []int) string {
+	if len(list) == 0 { // Check if the slice is empty
+		return "N" // Return "N" as per the problem requirement
 	}
-	// Converte []int para string separada por espaços
-	return strings.Trim(fmt.Sprint(lista), "[]")
+
+	strValues := make([]string, len(list)) // Create a string slice of the same size
+	for i, v := range list {               // Loop through the integer slice
+		strValues[i] = strconv.Itoa(v) // Convert each integer to a string
+	}
+	return strings.Join(strValues, " ") // Merge strings with a space between them
 }
 
 func main() {
-	var totalAlbum, qtdPossui int
+	var totalAlbum, countOwned int // Declare variables for the initial metadata
 
-	// Entrada
-	if _, err := fmt.Scan(&totalAlbum, &qtdPossui); err != nil {
-		return
+	// Read the total album capacity and the number of stickers Baruel has
+	if _, err := fmt.Scan(&totalAlbum, &countOwned); err != nil {
+		return // Exit if there is an error reading the input
 	}
 
-	possuidas := make([]int, qtdPossui)
-	for i := 0; i < qtdPossui; i++ {
-		fmt.Scan(&possuidas[i])
+	owned := make([]int, countOwned) // Initialize a slice for the owned stickers
+	for i := 0; i < countOwned; i++ { // Loop for the amount of stickers owned
+		fmt.Scan(&owned[i]) // Read each sticker ID into the slice
 	}
 
-	// Processamento (Chamada das funções)
-	repetidas := buscarRepetidas(possuidas)
-	faltantes := buscarFaltantes(totalAlbum, possuidas)
+	duplicates := FindDuplicates(owned)      // Call function to find repeats
+	missing := FindMissing(totalAlbum, owned) // Call function to find gaps
 
-	// Saída
-	fmt.Println(formatarSaida(repetidas))
-	fmt.Println(formatarSaida(faltantes))
+	fmt.Println(FormatOutput(duplicates)) // Print the formatted duplicates line
+	fmt.Println(FormatOutput(missing))    // Print the formatted missing line
 }

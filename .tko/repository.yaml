@@ -13,9 +13,9 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@main-quest
-- ed@side-quests
 - ed@revisão
+- ed@side-quests
+- ed@main-quest
 tasks:
   ed@pintando: '{rate:100}'
   ed@mumia: '{rate:100}'
