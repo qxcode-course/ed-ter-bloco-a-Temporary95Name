@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-23_00-58-20",
+            "content": "@@ -1,36 +1,4 @@\n-/*%0A// C%C3%B3digo feito por m%C3%A1quina.%0A\n pack\n@@ -59,17 +59,21 @@\n e from '\n-f\n+start\n ' to 'ta\n@@ -113,17 +113,21 @@\n getDist(\n-f\n+start\n , target\n@@ -227,17 +227,21 @@\n arget - \n-f\n+start\n  + N) %25 \n@@ -285,17 +285,21 @@\n return (\n-f\n+start\n  - targe\n@@ -335,24 +335,24 @@\n var \n-h, p, f\n+a, b, start\n , dir\n-ecao\n  int\n@@ -406,840 +406,67 @@\n an(&\n-h, &p, &f, &direcao)%0A%0A%09// Delegate the math to the function%0A%09distA := getDist(f, h, direcao)%0A%09distB := getDist(f, p, direcao)%0A%0A%09// Compare and Print in main%0A%09if distA %3C= distB %7B%0A%09%09fmt.Println(%22S%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D%0A%7D%0A*/%0Apackage main%0A%0Aimport %22fmt%22%0A%0A// getDistNaive %22walks%22 from start to target and counts the steps%0Afunc getDistNaive(start, target, direction int) int %7B%0A%09steps := 0%0A%09current := start%0A%0A%09// Keep moving until we reach \n+a, &b, &start, &dir)%0A%0A%09// Delegate the ma\n th\n-e\n  t\n-arget%0A%09for current != target %7B%0A%09%09current = current + direction%0A%09%09steps++%0A%0A%09%09// Handle the %22wrap around%22 (the loop)%0A%09%09if current %3E 15 %7B%0A%09%09%09current = 0%0A%09%09%7D else if current %3C 0 %7B%0A%09%09%09current = 15%0A%09%09%7D%0A%09%7D%0A%09return steps%0A%7D%0A%0Afunc main() %7B%0A%09var a, b, start, dir int%0A%0A%09// Scanning 4 numbers: targetA, targetB, starting point, direction%0A%09fmt.Scan(&a, &b, &start, &dir)%0A%0A%09// Get distances naively\n+o the function\n %0A%09di\n@@ -471,37 +471,32 @@\n distA := getDist\n-Naive\n (start, a, dir)%0A\n@@ -516,13 +516,8 @@\n Dist\n-Naive\n (sta\n@@ -545,17 +545,17 @@\n are and \n-p\n+P\n rint in \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-23_01-05-30",
+            "content": "@@ -128,18 +128,16 @@\n ection'%0A\n-%0A%09\n func get\n@@ -173,17 +173,16 @@\n ) int %7B%0A\n-%09\n %09const N\n@@ -187,17 +187,16 @@\n  N = 16%0A\n-%09\n %09if dire\n@@ -210,17 +210,16 @@\n = 1 %7B%0A%09%09\n-%09\n // Clock\n@@ -232,17 +232,16 @@\n istance%0A\n-%09\n %09%09return\n@@ -262,21 +262,19 @@\n  N) %25 N%0A\n-%09\n %09%7D%0A\n-%09\n %09// Coun\n@@ -288,33 +288,32 @@\n ckwise distance%0A\n-%09\n %09return (f - tar\n@@ -329,13 +329,11 @@\n %25 N%0A\n-%09\n %7D%0A%0A\n-%09\n func\n@@ -342,17 +342,16 @@\n ain() %7B%0A\n-%09\n %09var h, \n@@ -369,17 +369,16 @@\n ao int%0A%0A\n-%09\n %09// Scan\n@@ -407,17 +407,16 @@\n ne line%0A\n-%09\n %09fmt.Sca\n@@ -436,25 +436,24 @@\n  &direcao)%0A%0A\n-%09\n %09// Delegate\n@@ -478,17 +478,16 @@\n unction%0A\n-%09\n %09distA :\n@@ -511,17 +511,16 @@\n irecao)%0A\n-%09\n %09distB :\n@@ -545,17 +545,16 @@\n recao)%0A%0A\n-%09\n %09// Comp\n@@ -575,17 +575,16 @@\n in main%0A\n-%09\n %09if dist\n@@ -596,17 +596,16 @@\n distB %7B%0A\n-%09\n %09%09fmt.Pr\n@@ -615,17 +615,16 @@\n ln(%22S%22)%0A\n-%09\n %09%7D else \n@@ -625,17 +625,16 @@\n  else %7B%0A\n-%09\n %09%09fmt.Pr\n@@ -644,23 +644,21 @@\n ln(%22N%22)%0A\n-%09%09%7D%0A\n %09%7D%0A\n+%7D%0A\n */%0Apacka\n@@ -768,40 +768,32 @@\n ive(\n-pontoComeco, pontoFinal\n+start, target\n , direc\n-ao\n+tion\n  int\n@@ -805,21 +805,20 @@\n  %7B%0A%09\n-passo\n+step\n s := 0%0A%09\n atua\n@@ -817,28 +817,24 @@\n  0%0A%09\n-atual := pontoComeco\n+current := start\n %0A%0A%09/\n@@ -882,63 +882,66 @@\n for \n-atual != pontoFinal %7B%0A%09%09atual = atual + direcao%0A%09%09passo\n+current != target %7B%0A%09%09current = current + direction%0A%09%09step\n s++%0A\n@@ -987,21 +987,23 @@\n p)%0A%09%09if \n-atual\n+current\n  %3E 15 %7B%0A\n@@ -1005,21 +1005,23 @@\n 15 %7B%0A%09%09%09\n-atual\n+current\n  = 0%0A%09%09%7D\n@@ -1029,21 +1029,23 @@\n else if \n-atual\n+current\n  %3C 0 %7B%0A%09\n@@ -1050,13 +1050,15 @@\n %0A%09%09%09\n-atual\n+current\n  = 1\n@@ -1078,13 +1078,12 @@\n urn \n-passo\n+step\n s%0A%7D%0A\n@@ -1411,29 +1411,28 @@\n se %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D%0A%7D\n-%0A\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-03-23_01-10-57",
+            "content": "@@ -775,27 +775,28 @@\n ps%0Afunc \n-maisProximo\n+getDistNaive\n (pontoCo\n@@ -1284,35 +1284,36 @@\n y%0A%09distA := \n-maisProximo\n+getDistNaive\n (start, a, d\n@@ -1330,19 +1330,20 @@\n  := \n-maisProximo\n+getDistNaive\n (sta\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-23_01-12-35",
+            "content": "@@ -733,17 +733,21 @@\n s%22 from \n-f\n+start\n  to targ\n@@ -1128,26 +1128,32 @@\n  %7B%0A%09var \n-h, p, f\n+a, b, start\n , d\n+ir\n  int%0A%0A%09/\n@@ -1192,17 +1192,21 @@\n argetB, \n-f\n+start\n ing poin\n@@ -1229,29 +1229,35 @@\n t.Scan(&\n-h, &p, &f\n+a, &b, &start\n , &d\n+ir\n )%0A%0A%09// G\n@@ -1299,23 +1299,29 @@\n Proximo(\n-f, h\n+start, a\n , d\n+ir\n )%0A%09distB\n@@ -1336,23 +1336,29 @@\n Proximo(\n-f, p\n+start, b\n , d\n+ir\n )%0A%0A%09// C\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-23_01-14-22",
+            "content": "@@ -1262,23 +1262,16 @@\n ly%0A%09dist\n-anciaDe\n A := mai\n@@ -1293,23 +1293,16 @@\n d)%0A%09dist\n-anciaDe\n B := mai\n@@ -1358,23 +1358,16 @@\n %09if dist\n-anciaDe\n A %3C= dis\n@@ -1371,15 +1371,8 @@\n dist\n-anciaDe\n B %7B%0A\n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-23_01-15-00",
+            "content": "@@ -1,8 +1,691 @@\n+/*%0A// C%C3%B3digo feito por m%C3%A1quina.%0Apackage main%0A%0Aimport %22fmt%22%0A%0A// getDist returns the distance from 'f' to 'target' given the 'direction'%0A%0A%09func getDist(f, target, direction int) int %7B%0A%09%09const N = 16%0A%09%09if direction == 1 %7B%0A%09%09%09// Clockwise distance%0A%09%09%09return (target - f + N) %25 N%0A%09%09%7D%0A%09%09// Counter-clockwise distance%0A%09%09return (f - target + N) %25 N%0A%09%7D%0A%0A%09func main() %7B%0A%09%09var h, p, f, direcao int%0A%0A%09%09// Scan all four numbers in one line%0A%09%09fmt.Scan(&h, &p, &f, &direcao)%0A%0A%09%09// Delegate the math to the function%0A%09%09distA := getDist(f, h, direcao)%0A%09%09distB := getDist(f, p, direcao)%0A%0A%09%09// Compare and Print in main%0A%09%09if distA %3C= distB %7B%0A%09%09%09fmt.Println(%22S%22)%0A%09%09%7D else %7B%0A%09%09%09fmt.Println(%22N%22)%0A%09%09%7D%0A%09%7D%0A*/%0A\n package \n",
+            "lines": "77"
+        },
+        {
+            "label": "2026-03-23_01-15-11",
+            "content": "@@ -28,64 +28,65 @@\n %0A// \n-maisProximo vai de %22f%22 at%C3%A9 %22pontoFinal%22 e\n+getDistNaive %22walks%22 from f to target and\n  co\n+u\n nt\n-a os passo\n+s the step\n s%0Afu\n@@ -188,51 +188,45 @@\n %09// \n-Continuar o loop at%C3%A9 chegar ao %22pontoFinal%22\n+Keep moving until we reach the target\n %0A%09fo\n@@ -296,45 +296,43 @@\n %09// \n-Fazer com que o loop fique %22circular%22\n+Handle the %22wrap around%22 (the loop)\n %0A%09%09i\n@@ -465,22 +465,67 @@\n %09// \n-Ler h, p, f, d\n+Scanning 4 numbers: targetA, targetB, fing point, direction\n %0A%09fm\n@@ -556,29 +556,29 @@\n %09// \n-Calcular as distancia\n+Get distances naively\n %0A%09di\n@@ -665,46 +665,27 @@\n mpar\n-ar os resultados e imprimir a resposta\n+e and print in main\n %0A%09if\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-23_01-19-55",
+            "content": "package main\n\nimport \"fmt\"\n\n// maisProximo vai de \"f\" at\u00e9 \"pontoFinal\" e conta os passos\nfunc maisProximo(pontoComeco, pontoFinal, direcao int) int {\n\tpassos := 0\n\tatual := pontoComeco\n\n\t// Continuar o loop at\u00e9 chegar ao \"pontoFinal\"\n\tfor atual != pontoFinal {\n\t\tatual = atual + direcao\n\t\tpassos++\n\n\t\t// Fazer com que o loop fique \"circular\"\n\t\tif atual > 15 {\n\t\t\tatual = 0\n\t\t} else if atual < 0 {\n\t\t\tatual = 15\n\t\t}\n\t}\n\treturn passos\n}\n\nfunc main() {\n\tvar h, p, f, d int\n\n\t// Ler h, p, f, d\n\tfmt.Scan(&h, &p, &f, &d)\n\n\t// Calcular as distancia\n\tdistanciaDeA := maisProximo(f, h, d)\n\tdistanciaDeB := maisProximo(f, p, d)\n\n\t// Comparar os resultados e imprimir a resposta\n\tif distanciaDeA <= distanciaDeB {\n\t\tfmt.Println(\"S\")\n\t} else {\n\t\tfmt.Println(\"N\")\n\t}\n}\n",
+            "lines": "41"
+        }
+    ]
+}
