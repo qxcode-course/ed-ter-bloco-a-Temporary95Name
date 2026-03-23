@@ -1,3 +1,4 @@
+// Código feito por máquina - Dia 22 de Março de 2026
 package main
 
 import "fmt"

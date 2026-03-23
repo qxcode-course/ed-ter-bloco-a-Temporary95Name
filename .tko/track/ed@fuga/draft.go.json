@@ -37,8 +37,13 @@
         },
         {
             "label": "2026-03-23_01-19-55",
-            "content": "package main\n\nimport \"fmt\"\n\n// maisProximo vai de \"f\" at\u00e9 \"pontoFinal\" e conta os passos\nfunc maisProximo(pontoComeco, pontoFinal, direcao int) int {\n\tpassos := 0\n\tatual := pontoComeco\n\n\t// Continuar o loop at\u00e9 chegar ao \"pontoFinal\"\n\tfor atual != pontoFinal {\n\t\tatual = atual + direcao\n\t\tpassos++\n\n\t\t// Fazer com que o loop fique \"circular\"\n\t\tif atual > 15 {\n\t\t\tatual = 0\n\t\t} else if atual < 0 {\n\t\t\tatual = 15\n\t\t}\n\t}\n\treturn passos\n}\n\nfunc main() {\n\tvar h, p, f, d int\n\n\t// Ler h, p, f, d\n\tfmt.Scan(&h, &p, &f, &d)\n\n\t// Calcular as distancia\n\tdistanciaDeA := maisProximo(f, h, d)\n\tdistanciaDeB := maisProximo(f, p, d)\n\n\t// Comparar os resultados e imprimir a resposta\n\tif distanciaDeA <= distanciaDeB {\n\t\tfmt.Println(\"S\")\n\t} else {\n\t\tfmt.Println(\"N\")\n\t}\n}\n",
+            "content": "@@ -1,58 +1,4 @@\n-// C%C3%B3digo feito por m%C3%A1quina - Dia 22 de Mar%C3%A7o de 2026%0A\n pack\n",
             "lines": "41"
+        },
+        {
+            "label": "2026-03-23_01-30-57",
+            "content": "// C\u00f3digo feito por m\u00e1quina - Dia 22 de Mar\u00e7o de 2026\npackage main\n\nimport \"fmt\"\n\n// maisProximo vai de \"f\" at\u00e9 \"pontoFinal\" e conta os passos\nfunc maisProximo(pontoComeco, pontoFinal, direcao int) int {\n\tpassos := 0\n\tatual := pontoComeco\n\n\t// Continuar o loop at\u00e9 chegar ao \"pontoFinal\"\n\tfor atual != pontoFinal {\n\t\tatual = atual + direcao\n\t\tpassos++\n\n\t\t// Fazer com que o loop fique \"circular\"\n\t\tif atual > 15 {\n\t\t\tatual = 0\n\t\t} else if atual < 0 {\n\t\t\tatual = 15\n\t\t}\n\t}\n\treturn passos\n}\n\nfunc main() {\n\tvar h, p, f, d int\n\n\t// Ler h, p, f, d\n\tfmt.Scan(&h, &p, &f, &d)\n\n\t// Calcular as distancia\n\tdistanciaDeA := maisProximo(f, h, d)\n\tdistanciaDeB := maisProximo(f, p, d)\n\n\t// Comparar os resultados e imprimir a resposta\n\tif distanciaDeA <= distanciaDeB {\n\t\tfmt.Println(\"S\")\n\t} else {\n\t\tfmt.Println(\"N\")\n\t}\n}\n",
+            "lines": "42"
         }
     ]
 }
