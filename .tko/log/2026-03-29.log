@@ -1,0 +1,18 @@
+2026-03-29 19:54:20, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-29 19:54:41, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-29 19:55:06, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-29 19:57:55, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-03-29 19:58:04, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-03-29 19:58:09, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-03-29 19:58:24, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-03-29 20:22:48, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-03-29 20:23:41, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-03-29 20:23:51, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-29 20:24:10, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-29 20:24:11, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-03-29 21:27:44, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-29 21:27:57, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:0, size:106
+2026-03-29 21:28:18, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-29 21:28:20, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-03-29 21:28:23, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:132
+2026-03-29 21:28:45, MOVE, v:1, k:ed@especiais, mode:BACK
