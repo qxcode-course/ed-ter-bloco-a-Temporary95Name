@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-01_01-35-22",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc print_jog(jogadores []int, espada int) {\n    fmt.Print(\"[ \")\n    for i, elem := range jogadores {\n        if elem == 0 {\n            continue\n        }\n        fmt.Print(elem)\n        if i == espada {\n            fmt.Print(\">\")\n        }\n        fmt.Print(\" \")\n    }\n    fmt.Print(\"]\\n\")\n}\n\nfunc procurar_vivo(jogadores []int, espada int) int {\n    for {\n        espada = (espada + 1) % len(jogadores)\n        if jogadores[espada] != 0 {\n            return espada\n        }\n    }\n}\n\nfunc main () {\n    var qtd, espada int\n    fmt.Scan(&qtd, &espada)\n    jogadores := make([]int, 0, qtd)\n\n    for i := 1; i <= qtd; i++ {\n        jogadores = append(jogadores, i)\n    }\n    espada -= 1\n    for range qtd - 1 {\n        print_jog(jogadores, espada)\n        vai_morrer := procurar_vivo(jogadores, espada)\n        jogadores[vai_morrer] = 0\n        espada = procurar_vivo(jogadores, espada)\n    }\n    print_jog(jogadores, espada)\n}",
+            "lines": "45"
+        }
+    ]
+}

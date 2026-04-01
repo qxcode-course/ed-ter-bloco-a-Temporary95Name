@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-01_01-18-30",
+            "content": "@@ -685,24 +685,28 @@\n line%0A    %7D%0A%0A\n+    \n %0A    var que\n@@ -925,179 +925,8 @@\n   %7D%0A\n-%0A%0A    resultadoA1 := countOccurencesInSlice(mainArray, queryArray)%0A%09%0A%09result1 := fmt.Sprint(resultadoA1)%0A    result1 = strings.Trim(result1, %22%5B%5D%22)%0A%09%0A%09fmt.Println(result1)%0A\n     \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-04-01_01-19-58",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc countOccurencesInSlice (mainArray []string, queryArray []string) []int {\n\t// Mapa para fazer a contagem\n\tcontagem := make(map[string]int)\n\t\n\t// Slice para armazenar os resultados\n\tresultado := make([]int, len(queryArray))\n\t\n\t\n\tfor _, str := range mainArray {\n\t\tcontagem[str]++\n\t}\n\t\n\t\n\tfor i, consulta := range queryArray {\n\t\tresultado[i] = contagem[consulta]\n\t}\n\t\n\t\n\treturn resultado\n}\n\n\nfunc main() {\n\t\n    var mainSize int\n    fmt.Scan(&mainSize) // Reads the first line integer\n\n    mainArray := make([]string, mainSize)\n    for i := 0; i < mainSize; i++ {\n        fmt.Scan(&mainArray[i]) // Reads each string separated by space/newline\n    }\n\n\n    var querySize int\n    fmt.Scan(&querySize) // Reads the third line integer\n\n    queryArray := make([]string, querySize)\n    for i := 0; i < querySize; i++ {\n        fmt.Scan(&queryArray[i]) // Reads each query string\n    }\n\n\n    resultadoA1 := countOccurencesInSlice(mainArray, queryArray)\n\t\n\tresult1 := fmt.Sprint(resultadoA1)\n    result1 = strings.Trim(result1, \"[]\")\n\t\n\tfmt.Println(result1)\n    /*\n    sliceA1 := []string{\"aba\", \"baba\", \"aba\", \"xzxb\"}\n\tsliceA2 := []string{\"aba\", \"xzxb\", \"ab\"}\n\t\n\tsliceB1 := []string{\"c\", \"c\", \"mpikv\"}\n\tsliceB2 := []string{\"f\", \"c\", \"o\", \"uplbd\", \"o\", \"zl\", \"xoi\", \"mpikv\"}\n\t\n\tsliceC1 := []string{\"qu\", \"qu\", \"pg\", \"qu\", \"qu\", \"cjyrx\", \"y\"}\n\tsliceC2 := []string{\"o\", \"qu\", \"sxsse\", \"b\", \"pd\", \"yuv\"}\n\t\n\tresultadoA1 := countOccurencesInSlice(sliceA1, sliceA2)\n\tresultadoA2 := countOccurencesInSlice(sliceB1, sliceB2)\n\tresultadoA3 := countOccurencesInSlice(sliceC1, sliceC2)\n\t\n\t\n\tresult1 := fmt.Sprint(resultadoA1)\n    result1 = strings.Trim(result1, \"[]\")\n    \n    result2 := fmt.Sprint(resultadoA2)\n    result2 = strings.Trim(result2, \"[]\")\n    \n    result3 := fmt.Sprint(resultadoA3)\n    result3 = strings.Trim(result3, \"[]\")\n\t\n\tfmt.Println(result1)\n\tfmt.Println(result2)\n\tfmt.Println(result3)\n    */\n}\n",
+            "lines": "84"
+        }
+    ]
+}
