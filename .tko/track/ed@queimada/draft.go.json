@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-07_02-09-54",
+            "content": "@@ -329,13 +329,9 @@\n %0A%09%7D%0A\n-%09/*%0A%09\n+%0A\n %09ret\n@@ -337,25 +337,24 @@\n turn (1 +%0A%09%09\n-%09\n burnTrees(gr\n@@ -363,25 +363,24 @@\n , l, c+1) +%0A\n-%09\n %09%09burnTrees(\n@@ -391,25 +391,24 @@\n , l, c-1) +%0A\n-%09\n %09%09burnTrees(\n@@ -425,17 +425,16 @@\n  c) +%0A%09%09\n-%09\n burnTree\n@@ -454,130 +454,8 @@\n c))%0A\n-%09*/%0A%09grid%5Bl%5D%5Bc%5D = 'o'%0A%09burnTrees(grid, l, c+1)%0A%09burnTrees(grid, l, c-1)%0A%09burnTrees(grid, l-1, c)%0A%09burnTrees(grid, l+1, c)%0A\n %7D%0A%0Af\n@@ -636,17 +636,20 @@\n cfire)%0A%0A\n-%09\n+    \n grid := \n@@ -670,17 +670,20 @@\n  0, nl)%0A\n-%09\n+    \n for rang\n@@ -689,18 +689,24 @@\n ge nl %7B%0A\n-%09%09\n+        \n scanner.\n@@ -712,18 +712,24 @@\n .Scan()%0A\n-%09%09\n+        \n line := \n@@ -751,18 +751,24 @@\n Text())%0A\n-%09%09\n+        \n grid = a\n@@ -785,20 +785,26 @@\n , line)%0A\n-%09%7D%0A%09\n+    %7D%0A    \n burnTree\n@@ -825,17 +825,20 @@\n  cfire)%0A\n-%09\n+    \n showGrid\n@@ -878,17 +878,20 @@\n rune) %7B%0A\n-%09\n+    \n for _, l\n@@ -910,18 +910,24 @@\n  grid %7B%0A\n-%09%09\n+        \n fmt.Prin\n@@ -944,13 +944,16 @@\n (line))%0A\n-%09\n+    \n %7D%0A%7D%0A\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-04-07_02-13-06",
+            "content": "@@ -467,20 +467,8 @@\n */%0A%09\n-%0A    /*%0A    \n grid\n@@ -584,133 +584,8 @@\n  c)%0A\n-    */%0A%0A    return 1 + burnTrees(grid, l, c+1) + burnTrees(grid, l, c-1) + burnTrees(grid, l-1, c) + burnTrees(grid, l+1, c)%0A\n %7D%0A%0Af\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-07_02-16-49",
+            "content": "@@ -468,16 +468,18 @@\n /%0A%09%0A    \n+/*\n %0A    gri\n@@ -600,16 +600,15 @@\n     \n+*/\n %0A%0A   \n- //\n  ret\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-04-07_02-18-41",
+            "content": "@@ -67,24 +67,28 @@\n  %5B%5D%5B%5Drune, l\n+ int\n , c int, val\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-04-07_02-24-35",
+            "content": "@@ -464,18 +464,16 @@\n /%0A%09%0A    \n-/*\n %0A    gri\n@@ -594,16 +594,16 @@\n     \n-*/\n %0A%0A    \n+//\n  ret\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-04-07_02-25-00",
+            "content": "@@ -463,43 +463,8 @@\n */%0A%09\n-var trash rune%0A    grid%5Bl%5D%5Bc%5D = 'o'\n %0A   \n@@ -599,57 +599,10 @@\n  */%0A\n-    showGrid(grid)%0A    fmt.Scanf(%22%25c%22, &trash)%0A%0A\n %0A\n+ \n     \n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-04-07_02-27-54",
+            "content": "@@ -325,16 +325,17 @@\n %0A%09%7D%0A%09/*%0A\n+%09\n %09return \n@@ -339,16 +339,17 @@\n rn (1 +%0A\n+%09\n %09%09burnTr\n@@ -366,24 +366,25 @@\n l, c+1) +%0A%09%09\n+%09\n burnTrees(gr\n@@ -393,24 +393,25 @@\n , l, c-1) +%0A\n+%09\n %09%09burnTrees(\n@@ -428,16 +428,17 @@\n  c) +%0A%09%09\n+%09\n burnTree\n@@ -459,19 +459,16 @@\n ))%0A%09*/%0A%09\n-// \n var tras\n@@ -633,19 +633,16 @@\n   */%0A   \n- //\n  showGri\n@@ -656,11 +656,8 @@\n %0A   \n- //\n  fmt\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-04-07_13-44-02",
+            "content": "@@ -267,16 +267,20 @@\n , c int)\n+ int\n  %7B%0A%09if !\n@@ -320,109 +320,468 @@\n urn \n+0\n %0A%09%7D%0A\n-    grid%5Bl%5D%5Bc%5D = 'o'%0A%09burnTrees(grid, l, c+1)%0A%09burnTrees(grid, l, c-1)%0A%09burnTrees(grid, l-1, c)%0A%09\n+%09/*%0A%09return (1 +%0A%09%09burnTrees(grid, l, c+1) +%0A%09%09burnTrees(grid, l, c-1) +%0A%09%09burnTrees(grid, l-1, c) +%0A%09%09burnTrees(grid, l+1, c))%0A%09*/%0A%09// var trash rune%0A    grid%5Bl%5D%5Bc%5D = 'o'%0A    /*%0A    grid%5Bl%5D%5Bc%5D = 'o'%0A%09burnTrees(grid, l, c+1)%0A%09burnTrees(grid, l, c-1)%0A%09burnTrees(grid, l-1, c)%0A%09burnTrees(grid, l+1, c)%0A    */%0A    // showGrid(grid)%0A    // fmt.Scanf(%22%25c%22, &trash)%0A%0A%0A    return 1 + burnTrees(grid, l, c+1) + burnTrees(grid, l, c-1) + burnTrees(grid, l-1, c) + \n burn\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-04-07_13-46-18",
+            "content": "@@ -1,139 +1,4 @@\n-// Feito copiando o codigo contido na gravacao da aula (o codigo foi feito em aula) e assistencia do professor em 07 de Abril de 2026.%0A\n pack\n@@ -311,21 +311,25 @@\n %09%09return\n+ \n %0A%09%7D%0A\n-%09\n+    \n grid%5Bl%5D%5B\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-07_13-52-25",
+            "content": "// Feito copiando o codigo contido na gravacao da aula (o codigo foi feito em aula) e assistencia do professor em 07 de Abril de 2026.\npackage main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc is_value(grid [][]rune, l, c int, value rune) bool {\n\tnl := len(grid)\n\tnc := len(grid[0])\n\tif c < 0 || c >= nc || l < 0 || l >= nl {\n\t\treturn false\n\t}\n\treturn grid[l][c] == value\n}\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\tif !is_value(grid, l, c, '#') {\n\t\treturn\n\t}\n\tgrid[l][c] = 'o'\n\tburnTrees(grid, l, c+1)\n\tburnTrees(grid, l, c-1)\n\tburnTrees(grid, l-1, c)\n\tburnTrees(grid, l+1, c)\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(grid [][]rune) {\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "51"
+        }
+    ]
+}
