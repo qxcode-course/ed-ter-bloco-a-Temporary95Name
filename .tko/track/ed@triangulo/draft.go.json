@@ -27,8 +27,88 @@
         },
         {
             "label": "2026-04-07_22-58-14",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"io\"\n\t\"os\"\n\t\"strconv\"\n)\n\n// CollectIntegers reads from an io.Reader and returns a slice of integers.\n// By using io.Reader instead of *os.File, this function can read from\n// files, network connections, or even strings during testing.\nfunc CollectIntegers(r io.Reader) ([]int, error) {\n\t// Initialize an empty slice. It starts with length 0.\n\tvar result []int\n\n\t// Create a scanner to wrap our reader.\n\t// Scanner is efficient for reading stream data.\n\tscanner := bufio.NewScanner(r)\n\n\t// CRITICAL STEP: Tell the scanner to split by \"words\" (spaces/newlines).\n\t// Without this, it would try to read whole lines as single integers.\n\tscanner.Split(bufio.ScanWords)\n\n\t// scanner.Scan() returns true as long as there is another \"word\" to read.\n\t// It returns false when it hits EOF (Ctrl+D) or an error.\n\tfor scanner.Scan() {\n\t\t// scanner.Text() gives us the string representation of the current token.\n\t\tword := scanner.Text()\n\n\t\t// Attempt to convert the string (e.g., \"123\") into a base-10 integer.\n\t\t// strconv.Atoi is shorthand for ParseInt(s, 10, 0).\n\t\tval, err := strconv.Atoi(word)\n\t\tif err != nil {\n\t\t\t// If the user types \"hello\" instead of \"123\", we return the error.\n\t\t\t// You could also 'continue' here if you want to ignore bad input.\n\t\t\treturn nil, fmt.Errorf(\"invalid input '%s': %w\", word, err)\n\t\t}\n\n\t\t// Add the valid integer to our slice.\n\t\t// Go handles the memory reallocation automatically as the slice grows.\n\t\tresult = append(result, val)\n\t}\n\n\t// After the loop, check if Scan stopped because of a real error (like a disk failure)\n\t// rather than just reaching the end of the input.\n\tif err := scanner.Err(); err != nil {\n\t\treturn nil, err\n\t}\n\n\treturn result, nil\n}\n\nfunc main() {\n\t// fmt.Println(\"Enter numbers (Type a non-number or press Ctrl+D on Unix/macOS or Ctrl+Z on Windows to finish):\")\n\n\t// Call our function, passing in os.Stdin.\n\t// Because os.Stdin implements io.Reader, it fits perfectly.\n\tnums, err := CollectIntegers(os.Stdin)\n\n\tif err != nil {\n\t\tfmt.Printf(\"Error: %v\\n\", err)\n\t\t// We can still print what we managed to collect before the error\n\t}\n\n\tfmt.Printf(\"%v\\n\", nums)\n}\n",
+            "content": "@@ -1735,16 +1735,19 @@\n in() %7B%0A%09\n+// \n fmt.Prin\n@@ -2136,46 +2136,13 @@\n tf(%22\n-Collected %25d numbers: %25v%5Cn%22, len(nums)\n+%25v%5Cn%22\n , nu\n",
             "lines": "68"
+        },
+        {
+            "label": "2026-04-08_01-30-31",
+            "content": "@@ -1724,90 +1724,8 @@\n %0A%7D%0A%0A\n-func recPyramidSum(slice %5B%5Dint) %5B%5Dint %7B%0A%09if len(slice) %3C 1 %7B%0A%09%09return slice%0A%09%7D%0A%7D%0A%0A\n func\n@@ -1735,19 +1735,16 @@\n in() %7B%0A%09\n-// \n fmt.Prin\n@@ -2129,21 +2129,54 @@\n Printf(%22\n-%25v%5Cn%22\n+Collected %25d numbers: %25v%5Cn%22, len(nums)\n , nums)%0A\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-04-08_01-30-41",
+            "content": "@@ -1386,17 +1386,16 @@\n r slice.\n- \n %0A%09%09// Go\n@@ -1720,16 +1720,98 @@\n  nil%0A%7D%0A%0A\n+func recPyramidSum(slice %5B%5Dint) %5B%5Dint %7B%0A%09if len(slice) %3C 1 %7B%0A%09%09return slice%0A%09%7D%0A%7D%0A%0A\n func mai\n@@ -1817,16 +1817,19 @@\n in() %7B%0A%09\n+// \n fmt.Prin\n@@ -2218,46 +2218,13 @@\n tf(%22\n-Collected %25d numbers: %25v%5Cn%22, len(nums)\n+%25v%5Cn%22\n , nu\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-08_01-30-47",
+            "content": "@@ -2130,21 +2130,54 @@\n Printf(%22\n-%25v%5Cn%22\n+Collected %25d numbers: %25v%5Cn%22, len(nums)\n , nums)%0A\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-04-08_01-31-05",
+            "content": "@@ -1736,19 +1736,16 @@\n in() %7B%0A%09\n-// \n fmt.Prin\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-04-08_01-31-15",
+            "content": "@@ -62,428 +62,8 @@\n %0A)%0A%0A\n-func piramide(slice %5B%5Dint) %7B%0A%09%0A%09if len(slice) %3C 1 %7B%0A%09%09return%0A%09%7D%0A%0A%09if len(slice) == 1 %7B%0A%09%09fmt.Println(slice%5B0%5D)%0A%09%09return%0A%09%7D%0A%0A%09// Create the next level: sum n and n+1%0A%09nextLevel := make(%5B%5Dint, len(slice)-1)%0A%09for i := 0; i %3C len(slice)-1; i++ %7B%0A%09%09nextLevel%5Bi%5D = slice%5Bi%5D + slice%5Bi+1%5D%0A%09%7D%0A%0A%09piramide(nextLevel)%0A%0A%09for i, val := range slice %7B%0A%09%09fmt.Print(val)%0A%09%09if i %3C len(slice) - 1 %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%7D%0A%09fmt.Print()%0A%7D%0A%0A\n // C\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-04-08_01-37-58",
+            "content": "@@ -2541,19 +2541,16 @@\n or%0A%09%7D%0A%0A%09\n-// \n fmt.Prin\n@@ -2570,22 +2570,6 @@\n ms)%0A\n-%09piramide(nums)%0A\n %7D%0A\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-04-08_01-38-35",
+            "content": "@@ -1,7 +1,4 @@\n-/*%0A\n pack\n@@ -2591,1171 +2591,4 @@\n )%0A%7D%0A\n-*/%0Apackage main%0A%0Aimport (%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A%09%22strconv%22%0A%09%22strings%22%0A)%0A%0Afunc sumPyramid(arr %5B%5Dint) %7B%0A%09if len(arr) == 0 %7B%0A%09%09return%0A%09%7D%0A%0A%09// Base Case: The top of the pyramid%0A%09if len(arr) == 1 %7B%0A%09%09fmt.Println(arr%5B0%5D)%0A%09%09return%0A%09%7D%0A%0A%09// Logic: Calculate the next level up%0A%09nextLevel := make(%5B%5Dint, len(arr)-1)%0A%09for i := 0; i %3C len(arr)-1; i++ %7B%0A%09%09nextLevel%5Bi%5D = arr%5Bi%5D + arr%5Bi+1%5D%0A%09%7D%0A%0A%09// Recursive call%0A%09sumPyramid(nextLevel)%0A%0A%09// Printing the current level after the recursion returns%0A%09for i, val := range arr %7B%0A%09%09fmt.Print(val)%0A%09%09if i %3C len(arr)-1 %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println()%0A%7D%0A%0Afunc main() %7B%0A%09// 1. Ask for user input%0A%09fmt.Println(%22Enter integers separated by spaces (e.g., 1 2 4 8):%22)%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09%0A%09if scanner.Scan() %7B%0A%09%09line := scanner.Text()%0A%09%09fields := strings.Fields(line)%0A%09%09%0A%09%09// 2. Convert string input to an integer slice%0A%09%09var inputArr %5B%5Dint%0A%09%09for _, field := range fields %7B%0A%09%09%09num, err := strconv.Atoi(field)%0A%09%09%09if err == nil %7B%0A%09%09%09%09inputArr = append(inputArr, num)%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09// 3. Start the recursion%0A%09%09if len(inputArr) %3E 0 %7B%0A%09%09%09sumPyramid(inputArr)%0A%09%09%7D else %7B%0A%09%09%09fmt.Println(%22No valid integers provided.%22)%0A%09%09%7D%0A%09%7D%0A%7D\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-04-08_01-39-53",
+            "content": "@@ -3221,19 +3221,16 @@\n  input%0A%09\n-// \n fmt.Prin\n",
+            "lines": "165"
+        },
+        {
+            "label": "2026-04-08_01-40-07",
+            "content": "@@ -3119,25 +3119,8 @@\n al)%0A\n-%09%09fmt.Print(%22%5B%22)%0A\n %09%09if\n@@ -3163,25 +3163,8 @@\n %09%09%7D%0A\n-%09%09fmt.Print(%22%5D%22)%0A\n %09%7D%0A%09\n",
+            "lines": "165"
+        },
+        {
+            "label": "2026-04-08_01-41-12",
+            "content": "@@ -3102,25 +3102,8 @@\n r %7B%0A\n-%09%09fmt.Print(%22%5B%22)%0A\n %09%09fm\n@@ -3124,25 +3124,25 @@\n %09fmt.Print(%22\n-%5D\n+%5B\n %22)%0A%09%09if i %3C \n@@ -3178,19 +3178,16 @@\n )%0A%09%09%7D%0A%09%09\n-// \n fmt.Prin\n",
+            "lines": "167"
+        },
+        {
+            "label": "2026-04-08_01-41-44",
+            "content": "@@ -3134,19 +3134,16 @@\n (val)%0A%09%09\n-// \n fmt.Prin\n@@ -3195,16 +3195,18 @@\n )%0A%09%09%7D%0A%09%09\n+//\n  fmt.Pri\n",
+            "lines": "168"
+        },
+        {
+            "label": "2026-04-08_01-42-06",
+            "content": "@@ -2696,52 +2696,8 @@\n ) %7B%0A\n-%09// Base Case: Safety check for empty input%0A\n %09if \n@@ -2766,25 +2766,8 @@\n amid\n- (single element)\n %0A%09if\n@@ -2804,28 +2804,12 @@\n (arr\n-) // Prints as %5B506%5D\n+%5B0%5D)\n %0A%09%09r\n@@ -2817,24 +2817,31 @@\n turn%0A%09%7D%0A%0A%09//\n+ Logic:\n  Calculate t\n@@ -2991,36 +2991,8 @@\n call\n-: Dive deeper into the stack\n %0A%09su\n@@ -3021,128 +3021,207 @@\n // P\n-ost-recursion print: This executes as the function calls finish%0A%09// fmt.Println(arr) automatically adds the %5B %5D brackets\n+rinting the current level after the recursion returns%0A%09for i, val := range arr %7B%0A%09%09fmt.Print(%22%5B%22)%0A%09%09fmt.Print(val)%0A%09%09// fmt.Print(%22%5D%22)%0A%09%09if i %3C len(arr)-1 %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%09 fmt.Print(%22%5D%22)%0A%09%7D\n %0A%09fm\n@@ -3230,19 +3230,16 @@\n Println(\n-arr\n )%0A%7D%0A%0Afun\n@@ -3250,16 +3250,45 @@\n in() %7B%0A%09\n+// 1. Ask for user input%0A%09// \n fmt.Prin\n@@ -3326,16 +3326,32 @@\n y spaces\n+ (e.g., 1 2 4 8)\n :%22)%0A%09sca\n@@ -3469,16 +3469,65 @@\n ine)%0A%09%09%0A\n+%09%09// 2. Convert string input to an integer slice%0A\n %09%09var in\n@@ -3673,16 +3673,44 @@\n %09%7D%0A%09%09%7D%0A%0A\n+%09%09// 3. Start the recursion%0A\n %09%09if len\n@@ -3746,20 +3746,77 @@\n d(inputArr)%0A\n+%09%09%7D else %7B%0A%09%09%09fmt.Println(%22No valid integers provided.%22)%0A\n %09%09%7D%0A%09%7D%0A%7D\n",
+            "lines": "168"
+        },
+        {
+            "label": "2026-04-08_01-43-11",
+            "content": "@@ -3264,35 +3264,32 @@\n %0Afunc main() %7B%0A%09\n-// \n fmt.Println(%22Ent\n",
+            "lines": "156"
+        },
+        {
+            "label": "2026-04-08_01-43-33",
+            "content": "@@ -2692,16 +2692,60 @@\n %5Dint) %7B%0A\n+%09// Base Case: Safety check for empty input%0A\n %09if len(\n@@ -2785,16 +2785,20 @@\n  Case: T\n+he t\n op of th\n@@ -2806,16 +2806,33 @@\n  pyramid\n+ (single element)\n %0A%09if len\n@@ -2846,35 +2846,51 @@\n = 1 %7B%0A%09%09\n-printFormatted(arr)\n+fmt.Println(arr) // Prints as %5B506%5D\n %0A%09%09retur\n@@ -2923,16 +2923,19 @@\n xt level\n+ up\n %0A%09nextLe\n@@ -3057,18 +3057,18 @@\n ive call\n+:\n  \n-(\n Dive dee\n@@ -3072,15 +3072,25 @@\n deep\n- first)\n+er into the stack\n %0A%09su\n@@ -3119,271 +3119,128 @@\n // P\n-rint current level during the %22unwind%22%0A%09printFormatted(arr)%0A%7D%0A%0A// Helper function to print with specific %22%5B 1 2 3 %5D%22 spacing%0Afunc printFormatted(arr %5B%5Dint) %7B%0A%09fmt.Print(%22%5B %22)%0A%09for i, val := range arr %7B%0A%09%09fmt.Print(val)%0A%09%09if i %3C len(arr) %7B%0A%09%09%09fmt.Print(%22 %22)%0A%09%09%7D%0A%09%7D\n+ost-recursion print: This executes as the function calls finish%0A%09// fmt.Println(arr) automatically adds the %5B %5D brackets\n %0A%09fm\n@@ -3253,11 +3253,11 @@\n tln(\n-%22%5D%22\n+arr\n )%0A%7D%0A\n@@ -3272,16 +3272,19 @@\n in() %7B%0A%09\n+// \n fmt.Prin\n@@ -3361,24 +3361,25 @@\n r(os.Stdin)%0A\n+%09\n %0A%09if scanner\n@@ -3446,16 +3446,18 @@\n s(line)%0A\n+%09%09\n %0A%09%09var i\n",
+            "lines": "156"
+        },
+        {
+            "label": "2026-04-08_01-44-41",
+            "content": "@@ -3313,35 +3313,32 @@\n %0Afunc main() %7B%0A%09\n-// \n fmt.Println(%22Ent\n",
+            "lines": "166"
+        },
+        {
+            "label": "2026-04-08_01-44-50",
+            "content": "/*\npackage main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"io\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc piramide(slice []int) {\n\t\n\tif len(slice) < 1 {\n\t\treturn\n\t}\n\n\tif len(slice) == 1 {\n\t\tfmt.Println(slice[0])\n\t\treturn\n\t}\n\n\t// Create the next level: sum n and n+1\n\tnextLevel := make([]int, len(slice)-1)\n\tfor i := 0; i < len(slice)-1; i++ {\n\t\tnextLevel[i] = slice[i] + slice[i+1]\n\t}\n\n\tpiramide(nextLevel)\n\n\tfor i, val := range slice {\n\t\tfmt.Print(val)\n\t\tif i < len(slice) - 1 {\n\t\t\tfmt.Print(\" \")\n\t\t}\n\t}\n\tfmt.Print()\n}\n\n// CollectIntegers reads from an io.Reader and returns a slice of integers.\n// By using io.Reader instead of *os.File, this function can read from\n// files, network connections, or even strings during testing.\nfunc CollectIntegers(r io.Reader) ([]int, error) {\n\t// Initialize an empty slice. It starts with length 0.\n\tvar result []int\n\n\t// Create a scanner to wrap our reader.\n\t// Scanner is efficient for reading stream data.\n\tscanner := bufio.NewScanner(r)\n\n\t// CRITICAL STEP: Tell the scanner to split by \"words\" (spaces/newlines).\n\t// Without this, it would try to read whole lines as single integers.\n\tscanner.Split(bufio.ScanWords)\n\n\t// scanner.Scan() returns true as long as there is another \"word\" to read.\n\t// It returns false when it hits EOF (Ctrl+D) or an error.\n\tfor scanner.Scan() {\n\t\t// scanner.Text() gives us the string representation of the current token.\n\t\tword := scanner.Text()\n\n\t\t// Attempt to convert the string (e.g., \"123\") into a base-10 integer.\n\t\t// strconv.Atoi is shorthand for ParseInt(s, 10, 0).\n\t\tval, err := strconv.Atoi(word)\n\t\tif err != nil {\n\t\t\t// If the user types \"hello\" instead of \"123\", we return the error.\n\t\t\t// You could also 'continue' here if you want to ignore bad input.\n\t\t\treturn nil, fmt.Errorf(\"invalid input '%s': %w\", word, err)\n\t\t}\n\n\t\t// Add the valid integer to our slice. \n\t\t// Go handles the memory reallocation automatically as the slice grows.\n\t\tresult = append(result, val)\n\t}\n\n\t// After the loop, check if Scan stopped because of a real error (like a disk failure)\n\t// rather than just reaching the end of the input.\n\tif err := scanner.Err(); err != nil {\n\t\treturn nil, err\n\t}\n\n\treturn result, nil\n}\n\nfunc main() {\n\t// fmt.Println(\"Enter numbers (Type a non-number or press Ctrl+D on Unix/macOS or Ctrl+Z on Windows to finish):\")\n\n\t// Call our function, passing in os.Stdin.\n\t// Because os.Stdin implements io.Reader, it fits perfectly.\n\tnums, err := CollectIntegers(os.Stdin)\n\n\tif err != nil {\n\t\tfmt.Printf(\"Error: %v\\n\", err)\n\t\t// We can still print what we managed to collect before the error\n\t}\n\n\t// fmt.Printf(\"%v\\n\", nums)\n\tpiramide(nums)\n}\n*/\npackage main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc sumPyramid(arr []int) {\n\tif len(arr) == 0 {\n\t\treturn\n\t}\n\n\t// Base Case: Top of the pyramid\n\tif len(arr) == 1 {\n\t\tprintFormatted(arr)\n\t\treturn\n\t}\n\n\t// Calculate the next level\n\tnextLevel := make([]int, len(arr)-1)\n\tfor i := 0; i < len(arr)-1; i++ {\n\t\tnextLevel[i] = arr[i] + arr[i+1]\n\t}\n\n\t// Recursive call (Dive deep first)\n\tsumPyramid(nextLevel)\n\n\t// Print current level during the \"unwind\"\n\tprintFormatted(arr)\n}\n\n// Helper function to print with specific \"[ 1 2 3 ]\" spacing\nfunc printFormatted(arr []int) {\n\tfmt.Print(\"[ \")\n\tfor i, val := range arr {\n\t\tfmt.Print(val)\n\t\tif i < len(arr) {\n\t\t\tfmt.Print(\" \")\n\t\t}\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc main() {\n\t// fmt.Println(\"Enter integers separated by spaces:\")\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tif scanner.Scan() {\n\t\tline := scanner.Text()\n\t\tfields := strings.Fields(line)\n\n\t\tvar inputArr []int\n\t\tfor _, field := range fields {\n\t\t\tnum, err := strconv.Atoi(field)\n\t\t\tif err == nil {\n\t\t\t\tinputArr = append(inputArr, num)\n\t\t\t}\n\t\t}\n\n\t\tif len(inputArr) > 0 {\n\t\t\tsumPyramid(inputArr)\n\t\t}\n\t}\n}",
+            "lines": "166"
         }
     ]
 }

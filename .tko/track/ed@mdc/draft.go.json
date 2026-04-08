@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-08_01-15-16",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,284 +23,46 @@\n mt%22%0A\n-%0Afunc recMDC(num1 int, num2 int) int %7B%0A%0A%09if num1 == 0 %7B%0A%09%09return num2%0A%09%7D%0A%09%0A%09if num2 == 0 %7B%0A%09%09return num1%0A%09%7D%0A%09%0A%09return recMDC(num2, num1 %25 num2)%0A%7D%0A%0A%0Afunc main() %7B%0A%09var num1 int%0A%09var num2 int%0A%09fmt.Scanln(&num1, &num2)%0A%09%0A%09resultado := recMDC(num1, num2)%0A%09fmt.Println(resultado)%0A%09%0A%09%0A%7D\n+func main() %7B%0A    fmt.Println(%22qxcode%22)%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-08_01-23-18",
+            "content": "@@ -219,16 +219,18 @@\n fmt.Scan\n+ln\n (&num1, \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-08_01-24-09",
+            "content": "@@ -229,23 +229,10 @@\n num1\n-)%0A    fmt.Scan(\n+, \n &num\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-08_01-24-34",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc recMDC(num1 int, num2 int) int {\n\n\tif num1 == 0 {\n\t\treturn num2\n\t}\n\t\n\tif num2 == 0 {\n\t\treturn num1\n\t}\n\t\n\treturn recMDC(num2, num1 % num2)\n}\n\n\nfunc main() {\n\tvar num1 int\n\tvar num2 int\n\tfmt.Scan(&num1)\n    fmt.Scan(&num2)\n\t\n\tresultado := recMDC(num1, num2)\n\tfmt.Println(resultado)\n\t\n\t\n}",
+            "lines": "29"
+        }
+    ]
+}

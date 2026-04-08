@@ -8,3 +8,34 @@
 2026-04-08 01:12:09, EXEC, v:1, k:ed@enesimo, mode:FULL, rate:100, size:44
 2026-04-08 01:12:44, MOVE, v:1, k:ed@enesimo, mode:BACK
 2026-04-08 01:13:47, SELF, v:1, k:ed@enesimo, self:1, rate:100, study:20, problem:1, code:1, debug:1
+2026-04-08 01:14:51, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-08 01:15:13, MOVE, v:1, k:ed@resto, mode:BACK
+2026-04-08 01:15:14, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-04-08 01:15:16, EXEC, v:1, k:ed@mdc, mode:FULL, rate:0, size:5
+2026-04-08 01:15:18, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-04-08 01:15:19, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-04-08 01:23:18, EXEC, v:1, k:ed@mdc, mode:FULL, rate:0, size:28
+2026-04-08 01:24:09, EXEC, v:1, k:ed@mdc, mode:FULL, rate:0, size:28
+2026-04-08 01:24:34, EXEC, v:1, k:ed@mdc, mode:FULL, rate:100, size:29
+2026-04-08 01:26:30, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-04-08 01:27:15, SELF, v:1, k:ed@mdc, self:1, rate:100, study:20, problem:1, code:1, debug:1
+2026-04-08 01:28:39, MOVE, v:1, k:ed@quadrado, mode:PICK
+2026-04-08 01:29:18, MOVE, v:1, k:ed@quadrado, mode:BACK
+2026-04-08 01:29:43, MOVE, v:1, k:ed@triangulo, mode:PICK
+2026-04-08 01:30:31, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:68
+2026-04-08 01:30:41, EXEC, v:1, k:ed@triangulo, mode:FULL, size:74, fail:COMP
+2026-04-08 01:30:47, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:68
+2026-04-08 01:31:05, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:68
+2026-04-08 01:31:15, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:68
+2026-04-08 01:37:58, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:96
+2026-04-08 01:38:35, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:97
+2026-04-08 01:39:53, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:165
+2026-04-08 01:40:07, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:165
+2026-04-08 01:41:12, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:167
+2026-04-08 01:41:44, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:168
+2026-04-08 01:42:06, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:168
+2026-04-08 01:43:11, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:156
+2026-04-08 01:43:33, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:156
+2026-04-08 01:44:41, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:0, size:166
+2026-04-08 01:44:50, EXEC, v:1, k:ed@triangulo, mode:FULL, rate:100, size:166
+2026-04-08 01:46:31, MOVE, v:1, k:ed@triangulo, mode:BACK
