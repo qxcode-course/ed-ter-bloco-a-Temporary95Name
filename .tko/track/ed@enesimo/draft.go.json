@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-08_01-12-09",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc eh_primo(numero, divisor int) bool {\n\t\n\tif numero <= 1 {\n\t\tfmt.Println(\"O numero e igual a 1.\")\n\t\treturn false\n\t}\n\t\n\tif divisor == numero {\n\t\treturn true\n\t}\n\t\n\tif numero % divisor == 0 {\n\t\treturn false\n\t}\n\t\n\treturn eh_primo(numero, divisor + 1)\n}\n\nfunc enesimoPrimo(num1 int, num2 int, contagem int) int {\n\t\n\tif eh_primo(num2, 2) {\n\t\tcontagem++\n\t}\n\t\n\tif contagem == num1 {\n\t\treturn num2\n\t}\n\t\n\treturn enesimoPrimo(num1, num2 + 1, contagem)\n}\n\nfunc main() {\n\tvar num int\n\t\n\tfmt.Scanln(&num)\n\t\n\tresult := enesimoPrimo(num, 2, 0)\n\t\n\tfmt.Println(result)\n}\n",
+            "lines": "44"
+        }
+    ]
+}
