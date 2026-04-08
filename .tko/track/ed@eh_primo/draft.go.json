@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-08_00-43-02",
+            "content": "@@ -83,16 +83,55 @@\n  %3C= 1 %7B%0A\n+%09%09fmt.Println(%22O numero e igual a 1.%22)%0A\n %09%09return\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-08_00-43-17",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc eh_primo(numero, divisor int) bool {\n\t\n\tif numero <= 1 {\n\t\treturn false\n\t}\n\t\n\tif divisor == numero {\n\t\treturn true\n\t}\n\t\n\tif numero % divisor == 0 {\n\t\treturn false\n\t}\n\t\n\treturn eh_primo(numero, divisor + 1)\n}\n\nfunc main() {\n\tvar num int\n\t\n\tfmt.Scanln(&num)\n\t\n\tvar result bool = eh_primo(num, 2)\n\t\n\tfmt.Println(result)\n}\n",
+            "lines": "30"
+        }
+    ]
+}
