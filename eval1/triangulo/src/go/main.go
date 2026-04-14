@@ -15,7 +15,7 @@ func processa(vet []int) {
 		fmt.Println(vet)
 	}
 	// 2. monte o vetor auxiliar com os resultados das somas
-	aux := make([]int, len(vet)-1, 0)
+	aux := make([]int, 0, len(vet)-1)
 
 	for i := 0; i < len(vet)-1; i++ {
 		aux[i] = vet[i] + vet[i+1]
