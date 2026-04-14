@@ -1,0 +1,37 @@
+2026-04-14 13:18:06, MOVE, v:1, k:eval1@triangulo, mode:DOWN
+2026-04-14 13:18:09, MOVE, v:1, k:eval1@triangulo, mode:PICK
+2026-04-14 13:23:44, MOVE, v:1, k:eval1@triangulo, mode:PICK
+2026-04-14 13:28:33, MOVE, v:1, k:eval1@triangulo, mode:EDIT
+2026-04-14 13:29:37, MOVE, v:1, k:eval1@triangulo, mode:EDIT
+2026-04-14 13:37:48, MOVE, v:1, k:eval1@triangulo, mode:BACK
+2026-04-14 13:37:53, MOVE, v:1, k:eval1@baruel, mode:DOWN
+2026-04-14 13:37:58, MOVE, v:1, k:eval1@baruel, mode:PICK
+2026-04-14 13:38:13, MOVE, v:1, k:eval1@baruel, mode:BACK
+2026-04-14 13:38:15, MOVE, v:1, k:eval1@apagando, mode:DOWN
+2026-04-14 13:38:19, MOVE, v:1, k:eval1@apagando, mode:PICK
+2026-04-14 13:38:33, MOVE, v:1, k:eval1@apagando, mode:BACK
+2026-04-14 13:38:36, MOVE, v:1, k:eval1@casais, mode:DOWN
+2026-04-14 13:38:39, MOVE, v:1, k:eval1@casais, mode:PICK
+2026-04-14 13:37:46, MOVE, v:1, k:eval1@triangulo, mode:EDIT
+2026-04-14 13:37:53, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 13:37:53, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 13:38:15, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 13:38:15, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 13:38:15, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 13:38:36, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:38:36, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:38:36, MOVE, v:1, k:eval1@casais, mode:EDIT
+2026-04-14 13:38:48, MOVE, v:1, k:eval1@casais, mode:BACK
+2026-04-14 13:38:50, MOVE, v:1, k:eval1@queimada, mode:DOWN
+2026-04-14 13:38:53, MOVE, v:1, k:eval1@queimada, mode:PICK
+2026-04-14 13:38:50, MOVE, v:1, k:eval1@queimada, mode:EDIT
+2026-04-14 13:38:50, MOVE, v:1, k:eval1@queimada, mode:EDIT
+2026-04-14 13:38:50, MOVE, v:1, k:eval1@queimada, mode:EDIT
+2026-04-14 13:42:52, MOVE, v:1, k:eval1@triangulo, mode:EDIT
+2026-04-14 13:44:20, EXEC, v:1, k:eval1@queimada, mode:FULL, rate:14, size:38
+2026-04-14 13:44:27, MOVE, v:1, k:eval1@queimada, mode:BACK
+2026-04-14 13:44:29, MOVE, v:1, k:eval1@triangulo, mode:PICK
+2026-04-14 13:44:31, EXEC, v:1, k:eval1@triangulo, mode:FULL, size:57, fail:COMP
+2026-04-14 13:45:35, EXEC, v:1, k:eval1@triangulo, mode:FULL, rate:0, size:57
+2026-04-14 13:47:10, EXEC, v:1, k:eval1@triangulo, mode:FULL, rate:0, size:57
+2026-04-14 13:47:37, MOVE, v:1, k:eval1@triangulo, mode:BACK
