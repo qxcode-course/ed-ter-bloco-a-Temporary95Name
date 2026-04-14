@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_14-33-52",
+            "content": "@@ -159,18 +159,16 @@\n fmt.Scan\n-ln\n (vet%5Bi%5D)\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-14_14-39-38",
+            "content": "@@ -127,20 +127,24 @@\n  0; i %3C \n-num1\n+len(vet)\n ; i++ %7B%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-14_14-40-12",
+            "content": "@@ -155,16 +155,18 @@\n fmt.Scan\n+ln\n (vet%5Bi%5D)\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-14_14-43-32",
+            "content": "@@ -82,10 +82,8 @@\n     \n-/*\n vet \n@@ -195,32 +195,7 @@\n vet)\n- */%0A    fmt.Println(num1)\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-14_14-51-56",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\n    var num1 int\n    fmt.Scanln(&num1)\n\n    /*vet := make([]int, 0, num1)\n\n    for i := 0; i < num1; i++ {\n        fmt.Scan(vet[i])\n    }\n\n    fmt.Println(vet) */\n    fmt.Println(num1)\n}\n",
+            "lines": "16"
+        }
+    ]
+}
