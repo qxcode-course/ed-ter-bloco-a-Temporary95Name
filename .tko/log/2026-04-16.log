@@ -14,3 +14,9 @@
 2026-04-16 00:48:58, MOVE, v:1, k:ed@resto, mode:BACK
 2026-04-16 00:50:56, MOVE, v:1, k:ed@resto, mode:EDIT
 2026-04-16 00:56:32, SELF, v:1, k:ed@resto, self:1, rate:100, study:60, friend:Weryck Lemos e David Sena
+2026-04-16 00:58:33, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-04-16 00:58:50, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-04-16 00:59:30, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-16 00:59:32, EXEC, v:1, k:ed@resto, mode:FULL, rate:100, size:21
+2026-04-16 00:59:35, EXEC, v:1, k:ed@resto, mode:FULL, rate:100
+2026-04-16 00:59:36, MOVE, v:1, k:ed@resto, mode:BACK

@@ -147,8 +147,13 @@
         },
         {
             "label": "2026-04-16_00-47-41",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc dividirPorDoisRecursao(n int) {\n\n\tif n == 0 {\n\t\treturn\n\t}\n\n\t// var resultado int = n / 2\n\t// var resto int = n % 2\n\n\t\n\t\n\n\t\n\tdividirPorDoisRecursao(n / 2)\n\n\tfmt.Println(n/2, n%2)\n}\n\nfunc main() {\n\tvar numero int\n\tfmt.Scanln(&numero)\n\n\t// var result int\n\tdividirPorDoisRecursao(numero)\n\t// fmt.Println(numero)\n}\n",
+            "content": "@@ -84,16 +84,79 @@\n turn%0A%09%7D%0A\n+%0A%09// var resultado int = n / 2%0A%09// var resto int = n %25 2%0A%0A%09%0A%09%0A%0A\n %09%0A%09divid\n@@ -259,16 +259,35 @@\n umero)%0A%0A\n+%09// var result int%0A\n %09dividir\n@@ -310,10 +310,34 @@\n numero)%0A\n+%09// fmt.Println(numero)%0A\n %7D%0A\n",
             "lines": "30"
+        },
+        {
+            "label": "2026-04-16_00-59-32",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc dividirPorDoisRecursao(n int) {\n\n\tif n == 0 {\n\t\treturn\n\t}\n\t\n\tdividirPorDoisRecursao(n / 2)\n\n\tfmt.Println(n/2, n%2)\n}\n\nfunc main() {\n\tvar numero int\n\tfmt.Scanln(&numero)\n\n\tdividirPorDoisRecursao(numero)\n}\n",
+            "lines": "21"
         }
     ]
 }
