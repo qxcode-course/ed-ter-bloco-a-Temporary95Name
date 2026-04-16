@@ -1,0 +1,154 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-15_22-50-52",
+            "content": "@@ -24,293 +24,8 @@\n t%22%0A%0A\n-func dividirPorDoisRecursao(n uint64) uint64 %7B%0A    %0A    if n %3C= 0 %7B%0A        fmt.Println(%220 1%22)%0A    %7D%0A%0A    var resultado uint64%0A    var resto uint64%0A%0A    resultado = n / 2%0A    resto = n %25 2%0A%0A    fmt.Println(resultado, resto)%0A%0A    dividirPorDoisRecursao(resultado)%0A%0A    fmt.Println()%0A%7D%0A%0A\n %0Afun\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-15_22-58-53",
+            "content": "@@ -253,15 +253,8 @@\n     \n-return \n divi\n@@ -288,16 +288,29 @@\n o)%0A%0A    \n+fmt.Println()\n %0A%7D%0A%0A%0Afun\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-15_22-59-11",
+            "content": "@@ -365,49 +365,12 @@\n o)%0A%0A\n-    dividirPorDoisRecursao(numero)\n %0A   \n- //\n  fmt\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-15_22-59-40",
+            "content": "@@ -54,16 +54,22 @@\n o(n \n+u\n int\n+64\n ) \n+u\n int\n+64\n  %7B%0A \n@@ -100,16 +100,26 @@\n     \n-return 0\n+fmt.Println(%220 1%22)\n %0A   \n@@ -140,19 +140,22 @@\n sultado \n+u\n int\n+64\n %0A    var\n@@ -161,19 +161,22 @@\n r resto \n+u\n int\n+64\n %0A%0A    re\n@@ -329,19 +329,22 @@\n  numero \n+u\n int\n+64\n %0A    fmt\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-15_23-00-36",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -65,13 +65,57 @@\n t %7B%0A\n-%0A%09%0A%0A%09\n+    %0A    if n %3C= 0 %7B%0A        return 0%0A    %7D%0A%0A    \n var \n@@ -128,17 +128,20 @@\n ado int%0A\n-%09\n+    \n var rest\n@@ -147,17 +147,20 @@\n to int%0A%0A\n-%09\n+    \n resultad\n@@ -169,17 +169,20 @@\n = n / 2%0A\n-%09\n+    \n resto = \n@@ -188,17 +188,20 @@\n  n %25 2%0A%0A\n-%09\n+    \n fmt.Prin\n@@ -231,36 +231,8 @@\n     \n-if n %3C= 0 %7B%0A%09%09return 0%0A%09%7D%0A%0A%09\n retu\n@@ -269,19 +269,25 @@\n ltado)%0A%0A\n+    %0A\n %7D%0A%0A\n+%0A\n func mai\n@@ -292,17 +292,20 @@\n ain() %7B%0A\n-%09\n+    \n var nume\n@@ -311,17 +311,20 @@\n ero int%0A\n-%09\n+    \n fmt.Scan\n@@ -336,17 +336,20 @@\n umero)%0A%0A\n-%09\n+    \n dividirP\n@@ -375,9 +375,12 @@\n ro)%0A\n-%09\n+    \n // f\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-15_23-14-04",
+            "content": "@@ -172,16 +172,41 @@\n o)%0A%0A    \n+if n %3C= 0 %7B%0A%09%09return 0%0A%09%7D\n %0A%0A%09retur\n@@ -246,39 +246,8 @@\n o)%0A%0A\n-    if n %3C= 0 %7B%0A%09%09return 0%0A%09%7D%0A%0A\n %7D%0A%0Af\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-15_23-14-20",
+            "content": "@@ -63,20 +63,20 @@\n  int %7B%0A%0A\n-    \n+%09%0A%0A%09\n var resu\n@@ -105,37 +105,8 @@\n nt%0A%0A\n-%09if n %3C= 0 %7B%0A%09%09return 0%0A%09%7D%0A%0A%0A\n %09res\n@@ -140,13 +140,8 @@\n  2%0A%0A\n-    %0A\n %09fmt\n@@ -168,16 +168,22 @@\n resto)%0A%0A\n+    %0A%0A\n %09return \n@@ -217,16 +217,47 @@\n ltado)%0A%0A\n+    if n %3C= 0 %7B%0A%09%09return 0%0A%09%7D%0A%0A\n %7D%0A%0Afunc \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-15_23-16-41",
+            "content": "@@ -165,21 +165,22 @@\n  n %25 2%0A%0A\n-%0A%09// \n+    %0A%09\n fmt.Prin\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-15_23-17-20",
+            "content": "@@ -127,9 +127,9 @@\n urn \n-1\n+0\n %0A%09%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-15_23-20-15",
+            "content": "@@ -167,16 +167,19 @@\n  %25 2%0A%0A%0A%09\n+// \n fmt.Prin\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-15_23-20-18",
+            "content": "@@ -70,11 +70,8 @@\n %0A   \n- //\n  var\n@@ -86,19 +86,16 @@\n do int%0A%09\n-// \n var rest\n@@ -131,20 +131,16 @@\n 1%0A%09%7D%0A%0A%0A%09\n-var \n resultad\n@@ -141,20 +141,16 @@\n sultado \n-int \n = n / 2%0A\n@@ -154,22 +154,14 @@\n  2%0A%09\n-var \n resto \n-int \n = n \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-15_23-21-14",
+            "content": "@@ -66,16 +66,19 @@\n t %7B%0A%0A   \n+ //\n  var res\n@@ -91,18 +91,13 @@\n  int\n- = n / 2%0A%09\n+%0A%09// \n var \n@@ -109,21 +109,9 @@\n  int\n- = n %25 2%0A    \n+%0A\n %0A%09if\n@@ -137,110 +137,136 @@\n 1%0A%09%7D\n- else %7B%0A        return dividirPorDoisRecursao(resultado)%0A    %7D%0A%0A%0A%09%0A%0A%0A%09fmt.Println(resultado, resto)%0A%0A%09\n+%0A%0A%0A%09var resultado int = n / 2%0A%09var resto int = n %25 2%0A%0A%0A%09fmt.Println(resultado, resto)%0A%0A%09return dividirPorDoisRecursao(resultado)\n %0A%0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-15_23-23-46",
+            "content": "@@ -67,13 +67,8 @@\n  %7B%0A%0A\n-    %0A\n     \n@@ -120,43 +120,12 @@\n %25 2%0A\n-%0A\n     \n-fmt.Println(resultado, resto)%0A\n %0A%09if\n@@ -212,16 +212,55 @@\n     %7D%0A%0A%0A\n+%09%0A%0A%0A%09fmt.Println(resultado, resto)%0A%0A%09%0A%0A\n %7D%0A%0Afunc \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-15_23-24-23",
+            "content": "@@ -130,24 +130,8 @@\n     \n-%0A%0A%09if n %3E 0 %7B%0A%09%09\n fmt.\n@@ -155,16 +155,41 @@\n , resto)\n+%0A%0A%09if n %3C= 0 %7B%0A%09%09return 1\n %0A%09%7D else\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-15_23-25-12",
+            "content": "@@ -126,16 +126,32 @@\n  2%0A%0A    \n+%0A%0A%09if n %3E 0 %7B%0A%09%09\n fmt.Prin\n@@ -175,41 +175,8 @@\n sto)\n-%0A%0A%09if n %3E 0 %7B%0A%09%09return 1%0A        \n %0A%09%7D \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-15_23-26-24",
+            "content": "@@ -67,39 +67,17 @@\n  %7B%0A%0A\n-%0A%09if n %3C= 0 %7B%0A%09%09return 1%0A%09%7D%0A%0A%0A%09\n+    %0A    \n var \n@@ -122,18 +122,20 @@\n  n %25 2%0A%0A\n-%0A%09\n+    \n fmt.Prin\n@@ -158,16 +158,65 @@\n esto)%0A%0A%09\n+if n %3E 0 %7B%0A%09%09return 1%0A        %0A%09%7D else %7B%0A        \n return d\n@@ -248,16 +248,23 @@\n ultado)%0A\n+    %7D%0A%0A\n %0A%7D%0A%0Afunc\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-15_23-26-54",
+            "content": "@@ -63,16 +63,17 @@\n  int %7B%0A%0A\n+%0A\n %09if n %3C=\n@@ -90,18 +90,16 @@\n urn \n-0\n+1\n %0A%09%7D%0A%0A\n+%0A\n %09\n-// \n var \n@@ -121,19 +121,16 @@\n  n / 2%0A%09\n-// \n var rest\n@@ -144,16 +144,17 @@\n  n %25 2%0A%0A\n+%0A\n %09fmt.Pri\n@@ -162,16 +162,24 @@\n tln(\n-n/2, n%252\n+resultado, resto\n )%0A%0A%09\n@@ -208,21 +208,25 @@\n ecursao(\n-n / 2\n+resultado\n )%0A%0A%7D%0A%0Afu\n@@ -280,33 +280,8 @@\n )%0A%0A%09\n-var result int%0A%09result = \n divi\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-15_23-34-47",
+            "content": "@@ -267,19 +267,16 @@\n mero)%0A%0A%09\n-// \n var resu\n@@ -283,19 +283,17 @@\n lt int%0A%09\n-// \n+r\n esult = \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-15_23-35-02",
+            "content": "@@ -204,17 +204,19 @@\n cursao(n\n-/\n+ / \n 2)%0A%0A%7D%0A%0Af\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-15_23-35-22",
+            "content": "@@ -92,16 +92,19 @@\n  0%0A%09%7D%0A%0A%09\n+// \n var resu\n@@ -203,25 +203,19 @@\n ecursao(\n-resultado\n+n/2\n )%0A%0A%7D%0A%0Afu\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-15_23-35-45",
+            "content": "@@ -119,16 +119,19 @@\n  n / 2%0A%09\n+// \n var rest\n@@ -162,24 +162,16 @@\n tln(\n-resultado, resto\n+n/2, n%252\n )%0A%0A%09\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-15_23-36-14",
+            "content": "@@ -92,19 +92,16 @@\n  0%0A%09%7D%0A%0A%09\n-// \n var resu\n@@ -119,19 +119,16 @@\n  n / 2%0A%09\n-// \n var rest\n@@ -159,16 +159,24 @@\n tln(\n-n/2, n%252\n+resultado, resto\n )%0A%0A%09\n@@ -209,12 +209,17 @@\n sao(\n-n/ 2\n+resultado\n )%0A%0A%7D\n@@ -292,16 +292,27 @@\n lt int%0A%09\n+// esult = \n dividirP\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-15_23-36-44",
+            "content": "@@ -205,16 +205,17 @@\n ursao(n/\n+ \n 2)%0A%0A%7D%0A%0Af\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-15_23-36-54",
+            "content": "@@ -69,17 +69,17 @@\n %0A%0A%09if n \n-=\n+%3C\n = 0 %7B%0A%09%09\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-15_23-38-38",
+            "content": "@@ -148,16 +148,40 @@\n  n %25 2%0A%0A\n+%09fmt.Println(n/2, n%252)%0A%0A\n %09return \n@@ -208,42 +208,11 @@\n ao(n\n- / 2)%0A%0A%09%0A%09fmt.Println(n/2, n%252)%0A%0A%09\n+/2)\n %0A%0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-16_00-38-29",
+            "content": "@@ -1,346 +1,187 @@\n-package main%0A%0Aimport %22fmt%22%0A%0Afunc dividirPorDoisRecursao(n int) int %7B%0A%0A%09if n == 0 %7B%0A%09%09return 0%0A%09%7D%0A%0A%09// var resultado int = n / 2%0A%09// var resto int = n %25 2%0A%0A%09%0A%09fmt.Println(n/2, n%252)%0A%0A%09%0A%09dividirPorDoisRecursao(n / 2)%0A%7D%0A%0Afunc main() %7B%0A%09var numero int%0A%09fmt.Scanln(&numero)%0A%0A%09// var result int%0A%09dividirPorDoisRecursao(numero)%0A%09// fmt.Println(numero)%0A%7D\n+@@ -152,36 +152,8 @@%0A  2%250A%250A%0A-%2509%250A%2509fmt.Println(n/2, n%25252)%250A%250A%2509%250A%0A %2509ret%0A@@ -186,16 +186,46 @@%0A (n / 2)%250A%0A+%250A%2509%250A%2509fmt.Println(n/2, n%25252)%250A%250A%2509%250A%250A%0A %257D%250A%250Afunc \n %0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-04-16_00-46-40",
+            "content": "@@ -151,16 +151,37 @@\n %25 2%0A%0A%09%0A%09\n+fmt.Println(n/2, n%252)\n %0A%0A%09%0A%09div\n@@ -210,32 +210,8 @@\n / 2)\n-%0A%0A%09fmt.Println(n/2, n%252)\n %0A%7D%0A%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-16_00-46-53",
+            "content": "@@ -55,16 +55,20 @@\n o(n int)\n+ int\n  %7B%0A%0A%09if \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-16_00-47-31",
+            "content": "@@ -80,16 +80,18 @@\n %09%09return\n+ 0\n %0A%09%7D%0A%0A%09//\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-16_00-47-41",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc dividirPorDoisRecursao(n int) {\n\n\tif n == 0 {\n\t\treturn\n\t}\n\n\t// var resultado int = n / 2\n\t// var resto int = n % 2\n\n\t\n\t\n\n\t\n\tdividirPorDoisRecursao(n / 2)\n\n\tfmt.Println(n/2, n%2)\n}\n\nfunc main() {\n\tvar numero int\n\tfmt.Scanln(&numero)\n\n\t// var result int\n\tdividirPorDoisRecursao(numero)\n\t// fmt.Println(numero)\n}\n",
+            "lines": "30"
+        }
+    ]
+}
