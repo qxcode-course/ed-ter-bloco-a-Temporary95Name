@@ -20,3 +20,13 @@
 2026-04-16 00:59:32, EXEC, v:1, k:ed@resto, mode:FULL, rate:100, size:21
 2026-04-16 00:59:35, EXEC, v:1, k:ed@resto, mode:FULL, rate:100
 2026-04-16 00:59:36, MOVE, v:1, k:ed@resto, mode:BACK
+2026-04-16 01:00:14, MOVE, v:1, k:ed@quadrado, mode:PICK
+2026-04-16 01:19:02, MOVE, v:1, k:ed@quadrado, mode:PICK
+2026-04-16 01:19:29, MOVE, v:1, k:ed@quadrado, mode:BACK
+2026-04-16 01:19:41, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-04-16 01:20:55, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-04-16 01:21:01, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-04-16 01:25:46, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0
+2026-04-16 01:30:21, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-04-16 01:30:29, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-04-16 01:31:57, MOVE, v:1, k:ed@especiais, mode:BACK
