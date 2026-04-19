@@ -29,8 +29,18 @@ func sortStress(vet []int) []int {
 }
 
 func reverse(vet []int) []int {
+	/*
 	_ = vet
 	return nil
+	*/
+	novo := make([]int, 0, len(vet))
+	
+	for i := len(vet) - 1; i >= 0; i-- {
+		novo = append(novo, vet[i])
+	}
+
+	return novo
+	
 }
 
 func unique(vet []int) []int {
