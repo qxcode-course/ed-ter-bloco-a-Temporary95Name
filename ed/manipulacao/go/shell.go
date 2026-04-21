@@ -49,8 +49,20 @@ func unique(vet []int) []int {
 }
 
 func repeated(vet []int) []int {
+	/*
 	_ = vet
 	return nil
+	*/
+
+	novo := make([]int, 0, len(vet))
+	
+	// for i := len(vet) - 1; i >= 0; i-- 
+	for i := 0; i < len(vet); i++ {
+		novo = append(novo, vet[i])
+	}
+
+	return novo
+
 }
 
 func main() {

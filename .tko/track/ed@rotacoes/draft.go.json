@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-19_22-47-24",
+            "content": "@@ -90,171 +90,28 @@\n &b)%0A\n-%0A    sliceUm := make(%5B%5Dint, 0, a)%0A    for i := 0; i %3C a; i++ %7B%0A        sliceUm%5Bi%5D = fmt.Scanln() %0A    %7D%0A    // rota%0A%0A%0A    fmt.Println(a, b)%0A    fmt.Println(sliceUm\n+    fmt.Println(a, b\n )%0A%7D%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-04-19_22-51-06",
+            "content": "@@ -161,32 +161,33 @@\n     \n-fmt.Scanln(&sliceUm%5Bi%5D) \n+sliceUm%5Bi%5D = fmt.Scanln()\n  %0A  \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-19_22-53-34",
+            "content": "@@ -206,19 +206,16 @@\n ta%0A%0A%0A   \n- //\n  fmt.Pri\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-19_22-54-10",
+            "content": "@@ -23,442 +23,75 @@\n mt%22%0A\n-%0Afunc rotateSliceByN(slice %5B%5Dint, n int) %5B%5Dint %7B%0A%0A    // Fazer uma slice com capacidade %22len(slice)%22 para armazenar os elementos rotacionados %22n%22 vezes.%0A    rotacionados := make(%5B%5Dint, 0, len(slice))%0A%0A    for %0A    %0A    return rotacionados%0A%7D%0Afunc main() %7B%0A%0A    var a int%0A    var b int%0A%0A    // Ler os dois inteiros.%0A    fmt.Scanln(&a, &b)%0A%0A    // Fazer uma slice com capacidade %22a%22, e depois ler os elementos e coloca-los em %22sliceUm%22. \n+func main() %7B%0A%0A    var a int%0A    var b int%0A%0A    fmt.Scanln(&a, &b)%0A\n %0A   \n@@ -193,57 +193,20 @@\n   %7D%0A\n-%0A\n     \n-resultado := rotateSliceByN(sliceUm, b)%0A    \n+// rota%0A\n %0A%0A  \n@@ -227,27 +227,24 @@\n ln(a, b)%0A   \n- //\n  fmt.Println\n@@ -256,35 +256,7 @@\n eUm)\n-%0A%0A    fmt.Println(resultado)\n %0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-20_01-45-34",
+            "content": "package main\nimport \"fmt\"\n\nfunc rotateSliceByN(slice []int, n int) []int {\n\n    // Fazer uma slice com capacidade \"len(slice)\" para armazenar os elementos rotacionados \"n\" vezes.\n    rotacionados := make([]int, 0, len(slice))\n\n    for \n    \n    return rotacionados\n}\nfunc main() {\n\n    var a int\n    var b int\n\n    // Ler os dois inteiros.\n    fmt.Scanln(&a, &b)\n\n    // Fazer uma slice com capacidade \"a\", e depois ler os elementos e coloca-los em \"sliceUm\". \n    sliceUm := make([]int, 0, a)\n    for i := 0; i < a; i++ {\n        fmt.Scanln(&sliceUm[i])  \n    }\n\n    resultado := rotateSliceByN(sliceUm, b)\n    \n\n    // fmt.Println(a, b)\n    // fmt.Println(sliceUm)\n\n    fmt.Println(resultado)\n}\n",
+            "lines": "34"
+        }
+    ]
+}
