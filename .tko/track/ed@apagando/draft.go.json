@@ -37,7 +37,27 @@
         },
         {
             "label": "2026-03-31_01-08-47",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc removeFromSet(mainSet []int, toBeRemoved []int) []int {\n\t// Make map\n\tmapaRemoveElements := make(map[int]bool)\n\tfor _, val := range toBeRemoved {\n\t\tmapaRemoveElements[val] = true\n\t}\n\t\n\t\n\t// Initialize slice and allocate capacity equal to mainSet slice\n\tresultado := make([]int, 0, len(mainSet))\n\t\n\t\n\t// Loop to check the boolean map\n\tfor _, val := range mainSet {\n\t\t// If not in the map, the value becomes false\n\t\tif !mapaRemoveElements[val] {\n\t\t\tresultado = append(resultado, val)\n\t\t}\n\t}\n\t\n\treturn resultado\n}\n\nfunc main() {\n\t// Objective: Make two slices with the size n1 and n2, and fill them with user defined integers.\n\t\n\tvar n1 int // First slice size\n\tfmt.Scan(&n1)\n\t\n\tfirstSet := make([]int, n1) // Create slice and store numbers in it\n\tfor i := 0; i < n1; i++ {\n\t\tfmt.Scan(&firstSet[i]) \n\t}\n\t\n\t\n\tvar n2 int // Second slice size\n\tfmt.Scan(&n2)\n\t\n\tsecondSet := make([]int, n2) // Create slice and store numbers in it\n\tfor i := 0; i < n2; i++ {\n\t\tfmt.Scan(&secondSet[i]) \n\t}\n\t\n\t\n\tintSlice := removeFromSet(firstSet, secondSet)\n\t\n\t// Convert slice to string\n\ttempString := fmt.Sprint(intSlice)\n\t// Remove \"[\" and \"]\" from the string \n\tresultado := strings.Trim(tempString, \"[]\")\n\t\n\t// fmt.Println(firstSet)\n\t// fmt.Println(secondSet)\n\tfmt.Printf(resultado) \n\tfmt.Print(\" \")\n\tfmt.Println()\n}",
+            "content": "@@ -1337,9 +1337,8 @@\n ntln()%0A%7D\n-%0A\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-04-26_22-46-27",
+            "content": "@@ -1291,16 +1291,17 @@\n mt.Print\n+f\n (resulta\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-04-26_22-46-45",
+            "content": "@@ -1321,19 +1321,16 @@\n t(%22 %22)%0A%09\n-// \n fmt.Prin\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-04-26_22-52-09",
+            "content": "@@ -1321,16 +1321,19 @@\n t(%22 %22)%0A%09\n+// \n fmt.Prin\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-04-26_22-52-17",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\nfunc removeFromSet(mainSet []int, toBeRemoved []int) []int {\n\t// Make map\n\tmapaRemoveElements := make(map[int]bool)\n\tfor _, val := range toBeRemoved {\n\t\tmapaRemoveElements[val] = true\n\t}\n\t\n\t\n\t// Initialize slice and allocate capacity equal to mainSet slice\n\tresultado := make([]int, 0, len(mainSet))\n\t\n\t\n\t// Loop to check the boolean map\n\tfor _, val := range mainSet {\n\t\t// If not in the map, the value becomes false\n\t\tif !mapaRemoveElements[val] {\n\t\t\tresultado = append(resultado, val)\n\t\t}\n\t}\n\t\n\treturn resultado\n}\n\nfunc main() {\n\t// Objective: Make two slices with the size n1 and n2, and fill them with user defined integers.\n\t\n\tvar n1 int // First slice size\n\tfmt.Scan(&n1)\n\t\n\tfirstSet := make([]int, n1) // Create slice and store numbers in it\n\tfor i := 0; i < n1; i++ {\n\t\tfmt.Scan(&firstSet[i]) \n\t}\n\t\n\t\n\tvar n2 int // Second slice size\n\tfmt.Scan(&n2)\n\t\n\tsecondSet := make([]int, n2) // Create slice and store numbers in it\n\tfor i := 0; i < n2; i++ {\n\t\tfmt.Scan(&secondSet[i]) \n\t}\n\t\n\t\n\tintSlice := removeFromSet(firstSet, secondSet)\n\t\n\t// Convert slice to string\n\ttempString := fmt.Sprint(intSlice)\n\t// Remove \"[\" and \"]\" from the string \n\tresultado := strings.Trim(tempString, \"[]\")\n\t\n\t// fmt.Println(firstSet)\n\t// fmt.Println(secondSet)\n\tfmt.Print(resultado) \n\tfmt.Print(\" \")\n\tfmt.Println()\n}\n",
             "lines": "64"
         }
     ]

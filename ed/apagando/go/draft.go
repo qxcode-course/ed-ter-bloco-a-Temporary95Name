@@ -58,7 +58,7 @@ func main() {
 	
 	// fmt.Println(firstSet)
 	// fmt.Println(secondSet)
-	fmt.Printf(resultado) 
+	fmt.Print(resultado) 
 	fmt.Print(" ")
 	fmt.Println()
 }
