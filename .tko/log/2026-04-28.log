@@ -1,0 +1,39 @@
+2026-04-28 01:19:41, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-04-28 01:19:56, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:86
+2026-04-28 01:20:27, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-04-28 01:20:31, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0
+2026-04-28 01:21:37, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0
+2026-04-28 01:21:51, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:86
+2026-04-28 01:23:16, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:88
+2026-04-28 01:23:36, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:88
+2026-04-28 01:23:41, EXEC, v:1, k:ed@rotacoes, mode:FREE
+2026-04-28 01:24:14, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0
+2026-04-28 01:24:14, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-04-28 01:23:36, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-04-28 01:25:40, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:86
+2026-04-28 01:26:09, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:0
+2026-04-28 01:26:17, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:86
+2026-04-28 01:26:45, MOVE, v:1, k:ed@rotacoes, mode:BACK
+2026-04-28 01:27:23, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-04-28 01:28:05, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:85
+2026-04-28 01:28:06, EXEC, v:1, k:ed@rotacoes, mode:FREE
+2026-04-28 01:30:16, EXEC, v:1, k:ed@rotacoes, mode:FULL, size:88, fail:COMP
+2026-04-28 01:30:14, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-04-28 01:28:07, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-04-28 01:30:30, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:88
+2026-04-28 01:30:30, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-04-28 01:30:30, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-04-28 01:37:21, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-04-28 14:37:22, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-04-28 14:42:07, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-04-28 14:42:18, EXEC, v:1, k:ed@rotacoes, mode:FULL, size:0, fail:COMP
+2026-04-28 14:42:21, MOVE, v:1, k:ed@rotacoes, mode:BACK
+2026-04-28 14:42:22, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-04-28 14:42:37, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-04-28 14:42:51, EXEC, v:1, k:ed@rotacoes, mode:FULL, fail:COMP
+2026-04-28 14:42:54, MOVE, v:1, k:ed@rotacoes, mode:BACK
+2026-04-28 14:42:42, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-04-28 14:50:56, MOVE, v:1, k:ed@fib1, mode:PICK
+2026-04-28 14:58:43, MOVE, v:1, k:ed@fib1, mode:BACK
+2026-04-28 18:38:42, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-04-28 18:38:59, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:84
