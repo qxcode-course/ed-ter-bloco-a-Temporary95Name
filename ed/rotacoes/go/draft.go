@@ -86,8 +86,8 @@ func main() {
 
 	// fmt.Print(resultadoFinal)
 
-	
-	// Imprimir com espaco antes do primeiro elemento e depois depois do ultimo elemento.
+
+	// Imprimir com espaco antes do primeiro elemento e depois depois do ultimo elemento. // IA/LLM foi usado.
 
 	strSliceFinal := make([]string, len(sliceFinal))
 	for i, v := range sliceFinal {
