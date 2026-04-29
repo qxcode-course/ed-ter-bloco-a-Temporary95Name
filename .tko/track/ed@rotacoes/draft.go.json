@@ -107,8 +107,38 @@
         },
         {
             "label": "2026-04-28_18-38-59",
-            "content": "// A resposta tem que ter um espaco antes do primeiro elemento e um espaco depois to ultimo elemento.\n// Exemplo: [*1*2*3*4*5*]\n\npackage main\n\nimport \"fmt\"\n\nfunc revertSlice(slice []int, b int) []int {\n\n\t// Fazer uma slice com capacidade \"len(slice)\" para armazenar os elementos rotacionados \"n\" vezes.\n\tsliceInvertida := make([]int, 0, len(slice))\n\n\tfor i := len(slice) - 1; i >= 0; i-- {\n\t\tsliceInvertida = append(sliceInvertida, slice[i])\n\t}\n\n\treturn sliceInvertida\n}\n\nfunc invertFirstK(slice []int, b int) []int {\n\n\tb = b % len(slice)\n\n\tstoreInversion := make([]int, 0, len(slice))\n\n\tfor i := 0; i < b; i++ {\n\t\tstoreInversion = append(storeInversion, slice[i])\n\t}\n\n\treturn storeInversion\n}\n\nfunc appendAfterK(slice []int, b int) []int {\n\n\tb = b % len(slice)\n\n\tstoreAfterK := make([]int, 0, len(slice))\n\n\tfor i := 0; i < len(slice); i++ {\n\n\t\tif i >= b {\n\t\t\tstoreAfterK = append(storeAfterK, slice[i])\n\t\t}\n\n\t}\n\n\treturn storeAfterK\n}\n\nfunc main() {\n\n\tvar a int\n\tvar b int\n\n\t// Ler os dois inteiros.\n\tfmt.Scanln(&a, &b)\n\n\t// Fazer uma slice com capacidade \"a\", e depois ler os elementos e coloca-los em \"sliceUm\".\n\tsliceUm := make([]int, a)\n\tfor i := 0; i < a; i++ {\n\t\tfmt.Scan(&sliceUm[i])\n\t}\n\n\tprimeiroPasso := revertSlice(sliceUm, b)\n\n\tsegundoPasso := invertFirstK(primeiroPasso, b)\n\n\tprimeiraMetadeInversa := revertSlice(segundoPasso, b)\n\n\tfazerSegundaMetade := appendAfterK(primeiroPasso, b)\n\n\tinverterSegundaMetade := revertSlice(fazerSegundaMetade, b)\n\n\t// fmt.Println(primeiroPasso)\n\n\t// fmt.Print(primeiraMetadeInversa)\n\t// fmt.Println(fazerSegundaMetade)\n\t// fmt.Print(inverterSegundaMetade)\n\n\tresultadoFinal := make([]int, 0, a)\n\tresultadoFinal = append(primeiraMetadeInversa, inverterSegundaMetade...)\n\n\tfmt.Print(resultadoFinal)\n}\n",
+            "content": "@@ -147,40 +147,13 @@\n ort \n-(%0A%09\n %22fmt%22\n-%0A%09%22strings%22%0A%09%22strconv%22%0A)\n %0A%0Afu\n@@ -1738,345 +1738,7 @@\n nal)\n-%0A%0A%09// Imprimir com espaco antes do primeiro elemento e depois depois do ultimo elemento.%0A%0A%09strResultadoFinal := make(%5B%5Dstring, len(resultadoFinal))%0A%09for i, v := range resultadoFinal %7B%0A%09%09strResultadoFinal%5Bi%5D = strconv.Itoa(v)%0A%09%7D%0A%0A%09resultadoFinalTotal :=  %22 %22 + strings.Join(strResultadoFinal, %22 %22) + %22 %22%0A%09fmt.Println((resultadoFinalTotal))\n %0A%7D%0A\n",
             "lines": "84"
+        },
+        {
+            "label": "2026-04-29_13-57-43",
+            "content": "@@ -1732,27 +1732,24 @@\n etade...)%0A%0A%09\n-// \n fmt.Print(re\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-04-29_13-57-54",
+            "content": "@@ -2019,17 +2019,16 @@\n al :=  %22\n-%5B\n  %22 + str\n@@ -2065,17 +2065,16 @@\n  %22) + %22 \n-%5D\n %22%0A%09fmt.P\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-04-29_13-59-42",
+            "content": "@@ -1624,21 +1624,25 @@\n tade)%0A%0A%09\n-slice\n+resultado\n Final :=\n@@ -1661,21 +1661,25 @@\n  0, a)%0A%09\n-slice\n+resultado\n Final = \n@@ -1895,21 +1895,25 @@\n ng, len(\n-slice\n+resultado\n Final))%0A\n@@ -1931,21 +1931,25 @@\n = range \n-slice\n+resultado\n Final %7B%0A\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-04-29_14-03-50",
+            "content": "@@ -1846,29 +1846,33 @@\n mento.%0A%0A%09str\n-Slice\n+Resultado\n Final := mak\n@@ -1937,21 +1937,25 @@\n  %7B%0A%09%09str\n-Slice\n+Resultado\n Final%5Bi%5D\n@@ -2025,21 +2025,25 @@\n Join(str\n-Slice\n+Resultado\n Final, %22\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-04-29_14-04-23",
+            "content": "@@ -1979,16 +1979,26 @@\n esultado\n+FinalTotal\n  :=  %22%5B \n@@ -2054,16 +2054,17 @@\n Println(\n+(\n resultad\n@@ -2064,12 +2064,23 @@\n esultado\n+FinalTotal)\n )%0A%7D%0A\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-04-29_14-04-49",
+            "content": "// A resposta tem que ter um espaco antes do primeiro elemento e um espaco depois to ultimo elemento.\n// Exemplo: [*1*2*3*4*5*]\n\npackage main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n\t\"strconv\"\n)\n\nfunc revertSlice(slice []int, b int) []int {\n\n\t// Fazer uma slice com capacidade \"len(slice)\" para armazenar os elementos rotacionados \"n\" vezes.\n\tsliceInvertida := make([]int, 0, len(slice))\n\n\tfor i := len(slice) - 1; i >= 0; i-- {\n\t\tsliceInvertida = append(sliceInvertida, slice[i])\n\t}\n\n\treturn sliceInvertida\n}\n\nfunc invertFirstK(slice []int, b int) []int {\n\n\tb = b % len(slice)\n\n\tstoreInversion := make([]int, 0, len(slice))\n\n\tfor i := 0; i < b; i++ {\n\t\tstoreInversion = append(storeInversion, slice[i])\n\t}\n\n\treturn storeInversion\n}\n\nfunc appendAfterK(slice []int, b int) []int {\n\n\tb = b % len(slice)\n\n\tstoreAfterK := make([]int, 0, len(slice))\n\n\tfor i := 0; i < len(slice); i++ {\n\n\t\tif i >= b {\n\t\t\tstoreAfterK = append(storeAfterK, slice[i])\n\t\t}\n\n\t}\n\n\treturn storeAfterK\n}\n\nfunc main() {\n\n\tvar a int\n\tvar b int\n\n\t// Ler os dois inteiros.\n\tfmt.Scanln(&a, &b)\n\n\t// Fazer uma slice com capacidade \"a\", e depois ler os elementos e coloca-los em \"sliceUm\".\n\tsliceUm := make([]int, a)\n\tfor i := 0; i < a; i++ {\n\t\tfmt.Scan(&sliceUm[i])\n\t}\n\n\tprimeiroPasso := revertSlice(sliceUm, b)\n\n\tsegundoPasso := invertFirstK(primeiroPasso, b)\n\n\tprimeiraMetadeInversa := revertSlice(segundoPasso, b)\n\n\tfazerSegundaMetade := appendAfterK(primeiroPasso, b)\n\n\tinverterSegundaMetade := revertSlice(fazerSegundaMetade, b)\n\n\t// fmt.Println(primeiroPasso)\n\n\t// fmt.Print(primeiraMetadeInversa)\n\t// fmt.Println(fazerSegundaMetade)\n\t// fmt.Print(inverterSegundaMetade)\n\n\tsliceFinal := make([]int, 0, a)\n\tsliceFinal = append(primeiraMetadeInversa, inverterSegundaMetade...)\n\n\t// fmt.Print(resultadoFinal)\n\n\t// Imprimir com espaco antes do primeiro elemento e depois depois do ultimo elemento.\n\n\tstrSliceFinal := make([]string, len(sliceFinal))\n\tfor i, v := range sliceFinal {\n\t\tstrSliceFinal[i] = strconv.Itoa(v)\n\t}\n\n\tresultado :=  \"[ \" + strings.Join(strSliceFinal, \" \") + \" ]\"\n\tfmt.Println(resultado)\n}\n",
+            "lines": "98"
         }
     ]
 }

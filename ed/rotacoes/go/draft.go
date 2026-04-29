@@ -3,7 +3,11 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+	"strconv"
+)
 
 func revertSlice(slice []int, b int) []int {
 
@@ -77,8 +81,19 @@ func main() {
 	// fmt.Println(fazerSegundaMetade)
 	// fmt.Print(inverterSegundaMetade)
 
-	resultadoFinal := make([]int, 0, a)
-	resultadoFinal = append(primeiraMetadeInversa, inverterSegundaMetade...)
+	sliceFinal := make([]int, 0, a)
+	sliceFinal = append(primeiraMetadeInversa, inverterSegundaMetade...)
 
-	fmt.Print(resultadoFinal)
+	// fmt.Print(resultadoFinal)
+
+	
+	// Imprimir com espaco antes do primeiro elemento e depois depois do ultimo elemento.
+
+	strSliceFinal := make([]string, len(sliceFinal))
+	for i, v := range sliceFinal {
+		strSliceFinal[i] = strconv.Itoa(v)
+	}
+
+	resultado :=  "[ " + strings.Join(strSliceFinal, " ") + " ]"
+	fmt.Println(resultado)
 }
