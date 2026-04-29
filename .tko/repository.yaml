@@ -23,8 +23,8 @@ sources:
   tasks: null
 expanded:
 - ed@vector
-- ed@map_set
 - ed@rec
+- ed@map_set
 flags:
   inbox: all
   panel: graph

@@ -37,3 +37,4 @@
 2026-04-28 14:58:43, MOVE, v:1, k:ed@fib1, mode:BACK
 2026-04-28 18:38:42, MOVE, v:1, k:ed@rotacoes, mode:PICK
 2026-04-28 18:38:59, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:84
+2026-04-28 18:40:19, MOVE, v:1, k:ed@rotacoes, mode:PICK
