@@ -23,8 +23,6 @@ sources:
   tasks: null
 expanded:
 - ed@vector
-- ed@rec
-- ed@map_set
 flags:
   inbox: all
   panel: graph
@@ -32,5 +30,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@rotacoes
-selected_index: 8
+selected: ed@vetbuild
+selected_index: 5
