@@ -1,0 +1,47 @@
+2026-05-06 13:53:18, MOVE, v:1, k:ed@sufixos, mode:PICK
+2026-05-06 14:00:00, MOVE, v:1, k:ed@sufixos, mode:PICK
+2026-05-06 14:04:52, EXEC, v:1, k:ed@sufixos, mode:FULL, size:16, fail:COMP
+2026-05-06 14:04:59, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-06 14:05:06, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:17
+2026-05-06 14:08:44, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-06 14:05:06, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-06 14:13:09, EXEC, v:1, k:ed@sufixos, mode:FULL, size:24, fail:COMP
+2026-05-06 14:13:44, EXEC, v:1, k:ed@sufixos, mode:FULL, size:24, fail:COMP
+2026-05-06 14:13:44, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-06 14:16:17, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:26
+2026-05-06 14:17:24, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:100, size:27
+2026-05-06 14:17:47, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:100, size:27
+2026-05-06 14:17:51, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:100
+2026-05-06 14:18:14, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:27
+2026-05-06 14:18:12, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-06 14:18:12, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-06 14:22:41, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:29
+2026-05-06 14:22:41, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-06 14:22:41, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-06 14:26:03, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:100, size:27
+2026-05-06 14:26:12, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:29
+2026-05-06 14:26:49, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0
+2026-05-06 14:27:30, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:29
+2026-05-06 14:28:03, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:31
+2026-05-06 14:28:28, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:100, size:31
+2026-05-06 14:28:44, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:32
+2026-05-06 14:28:43, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-06 14:28:44, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-06 14:30:42, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0
+2026-05-06 14:31:04, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:100, size:32
+2026-05-06 14:31:21, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:32
+2026-05-06 14:31:24, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0
+2026-05-06 14:31:35, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:32
+2026-05-06 14:31:44, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:32
+2026-05-06 14:31:55, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:32
+2026-05-06 14:31:59, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:32
+2026-05-06 14:32:33, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:32
+2026-05-06 14:33:04, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:32
+2026-05-06 14:34:58, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:32
+2026-05-06 14:34:56, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-06 14:34:54, MOVE, v:1, k:ed@sufixos, mode:EDIT
+2026-05-06 14:35:05, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:0, size:32
+2026-05-06 14:36:08, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:100, size:27
+2026-05-06 14:38:53, EXEC, v:1, k:ed@sufixos, mode:FULL, rate:100, size:28
+2026-05-06 14:38:54, MOVE, v:1, k:ed@sufixos, mode:BACK
+2026-05-06 14:39:37, SELF, v:1, k:ed@sufixos, self:1, rate:100, study:30, friend:David Sena, problem:1, debug:1

@@ -2,8 +2,143 @@
     "patches": [
         {
             "label": "2026-04-21_02-38-59",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"qxcode\")\n}\n",
+            "content": "@@ -23,122 +23,21 @@\n mt%22%0A\n-%0Afunc printRecursaoPiramide(a string) string %7B%0A%0A%0A%7D%0A%0A%0Afunc main() %7B%0A    var string string%0A%0A    fmt.Scanln(&string)%0A\n+func main() %7B\n %0A   \n@@ -53,14 +53,16 @@\n tln(\n-string\n+%22qxcode%22\n )%0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-05-06_14-04-52",
+            "content": "@@ -24,11 +24,8 @@\n t%22%0A%0A\n-/*%0A\n func\n@@ -74,10 +74,8 @@\n %0A%0A%7D%0A\n-*/\n %0A%0Afu\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-05-06_14-05-06",
+            "content": "@@ -20,16 +20,18 @@\n  %22fmt%22%0A%0A\n+/*\n %0Afunc pr\n@@ -50,21 +50,17 @@\n iramide(\n-texto\n+a\n  string)\n@@ -74,105 +74,13 @@\n  %7B%0A%0A\n-    if texto == %220/%22%0A%0A    fmt.Println(texto)%0A%0A    printRecursaoPiramide(texto%5B0:len(texto)-1%5D)\n %0A%7D%0A\n+*/\n %0A%0Afu\n@@ -91,21 +91,16 @@\n ain() %7B%0A\n-    %0A\n     var \n@@ -143,60 +143,8 @@\n g)%0A%0A\n-    resultado := printRecursaoPiramide(string)%0A    %0A\n     \n@@ -159,17 +159,14 @@\n tln(\n-resultado\n+string\n )%0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-05-06_14-13-09",
+            "content": "@@ -198,21 +198,22 @@\n     var \n-texto\n+string\n  string%0A\n@@ -229,21 +229,22 @@\n Scanln(&\n-texto\n+string\n )%0A%0A    r\n@@ -277,21 +277,22 @@\n iramide(\n-texto\n+string\n )%0A    %0A \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-05-06_14-13-44",
+            "content": "@@ -61,16 +61,23 @@\n  string)\n+ string\n  %7B%0A%0A    \n@@ -83,47 +83,45 @@\n  if \n-len(\n texto\n-)\n  == \n-0 %7B%0A        return%0A    %7D \n+%220/%22%0A%0A    fmt.Println(texto)\n %0A%0A  \n@@ -171,33 +171,8 @@\n 1%5D)%0A\n-%0A    fmt.Println(texto)%0A%0A\n %7D%0A%0A%0A\n@@ -231,32 +231,45 @@\n nln(&texto)%0A%0A   \n+ resultado :=\n  printRecursaoPi\n@@ -287,10 +287,37 @@\n o)%0A    %0A\n+    fmt.Println(resultado)%0A\n %7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-05-06_14-16-17",
+            "content": "@@ -120,11 +120,8 @@\n %0A   \n- //\n  pri\n@@ -165,45 +165,8 @@\n -1%5D)\n-%0A    printRecursaoPiramide(texto%5B1:%5D)\n %0A%0A  \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-05-06_14-17-24",
+            "content": "@@ -199,26 +199,16 @@\n texto%5B1:\n-len(texto)\n %5D)%0A%0A    \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-06_14-17-47",
+            "content": "@@ -189,33 +189,33 @@\n oPiramide(texto%5B\n-0\n+1\n :len(texto)%5D)%0A%0A \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-06_14-18-14",
+            "content": "@@ -173,69 +173,73 @@\n     \n-%0A%0A    fmt.Println(texto)%0A%0A    printRecursaoPiramide(texto%5B1:%5D\n+printRecursaoPiramide(texto%5B0:len(texto)%5D)%0A%0A    fmt.Println(texto\n )%0A%0A%7D\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-06_14-22-41",
+            "content": "@@ -165,16 +165,46 @@\n to)-1%5D)%0A\n+    %0A%0A    fmt.Println(texto)%0A%0A\n     prin\n@@ -237,32 +237,8 @@\n %5D)%0A%0A\n-    fmt.Println(texto)%0A%0A\n %7D%0A%0A%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-06_14-26-03",
+            "content": "@@ -169,38 +169,8 @@\n 1%5D)%0A\n-    %0A%0A    fmt.Println(texto)%0A%0A\n     \n@@ -203,16 +203,40 @@\n o%5B1:%5D)%0A%0A\n+    fmt.Println(texto)%0A%0A\n %7D%0A%0A%0Afunc\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-06_14-26-12",
+            "content": "@@ -229,28 +229,16 @@\n texto%5B1:\n-len(texto)-1\n %5D)%0A%0A%7D%0A%0A%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-06_14-27-30",
+            "content": "@@ -166,24 +166,49 @@\n o)-1%5D)%0A    %0A\n+%0A    fmt.Println(texto)%0A%0A\n     printRec\n@@ -247,43 +247,8 @@\n -1%5D)\n-%0A    %0A%0A    fmt.Println(texto)%0A%0A    \n %0A%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-06_14-28-03",
+            "content": "@@ -204,19 +204,35 @@\n texto%5B1:\n-%5D)%0A\n+len(texto)-1%5D)%0A    \n %0A%0A    fm\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-05-06_14-28-28",
+            "content": "@@ -174,38 +174,8 @@\n    %0A\n-    %0A%0A%0A    fmt.Println(texto)%0A\n     \n@@ -208,16 +208,41 @@\n o%5B1:%5D)%0A%0A\n+%0A    fmt.Println(texto)%0A%0A\n     %0A%0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-05-06_14-28-44",
+            "content": "@@ -166,24 +166,54 @@\n o)-1%5D)%0A    %0A\n+    %0A%0A%0A    fmt.Println(texto)%0A\n     printRec\n@@ -242,38 +242,8 @@\n %5D)%0A%0A\n-%0A    fmt.Println(texto)%0A    %0A%0A\n     \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-06_14-31-04",
+            "content": "@@ -202,16 +202,17 @@\n e(texto%5B\n+1\n :%5D)%0A%0A%0A  \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-06_14-31-21",
+            "content": "@@ -178,43 +178,8 @@\n     \n-%0A%0A%0A    fmt.Println(texto)%0A    %0A    \n prin\n@@ -205,16 +205,47 @@\n exto%5B:%5D)\n+%0A%0A%0A    fmt.Println(texto)%0A    %0A\n %0A    %0A%0A%7D\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-06_14-31-35",
+            "content": "@@ -238,26 +238,16 @@\n (texto%5B:\n-len(texto)\n %5D)%0A    %0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-06_14-31-44",
+            "content": "@@ -166,24 +166,59 @@\n o)-1%5D)%0A    %0A\n+    %0A%0A%0A    fmt.Println(texto)%0A    %0A\n     printRec\n@@ -255,43 +255,8 @@\n )%5D)%0A\n-%0A%0A    fmt.Println(texto)%0A    %0A    %0A\n     \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-06_14-31-55",
+            "content": "@@ -213,18 +213,16 @@\n n(texto)\n--1\n %5D)%0A%0A%0A   \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-06_14-31-59",
+            "content": "@@ -174,48 +174,8 @@\n    %0A\n-    %0A%0A%0A    fmt.Println(texto)%0A    %0A    %0A\n     \n@@ -219,16 +219,56 @@\n o)-1%5D)%0A%0A\n+%0A    fmt.Println(texto)%0A    %0A    %0A    %0A%0A\n %7D%0A%0A%0Afunc\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-06_14-32-33",
+            "content": "@@ -258,9 +258,9 @@\n to)-\n-2\n+1\n %5D)%0A%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-06_14-33-04",
+            "content": "@@ -253,16 +253,18 @@\n n(texto)\n+-2\n %5D)%0A%0A%7D%0A%0A%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-06_14-34-58",
+            "content": "@@ -242,17 +242,16 @@\n e(texto%5B\n-1\n :len(tex\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-06_14-35-05",
+            "content": "@@ -165,16 +165,60 @@\n to)-1%5D)%0A\n+    %0A    %0A%0A%0A    fmt.Println(texto)%0A    %0A    \n %0A    pri\n@@ -256,39 +256,16 @@\n texto)%5D)\n-%0A    fmt.Println(texto)\n %0A%0A%7D%0A%0A%0Afu\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-06_14-36-08",
+            "content": "@@ -123,30 +123,8 @@\n   //\n- Chamada recursiva%0A   \n  pri\n@@ -152,9 +152,9 @@\n xto%5B\n-1\n+0\n :len\n@@ -164,101 +164,60 @@\n xto)\n+-1\n %5D)%0A\n-    \n %0A    \n-// Armazenar o resultado na stack, para imprimir os resultados em ordem invertida\n+printRecursaoPiramide(texto%5B1:len(texto)%5D)\n %0A   \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-05-06_14-38-53",
+            "content": "package main\nimport \"fmt\"\n\n\nfunc printRecursaoPiramide(texto string) {\n\n    if len(texto) == 0 {\n        return\n    } \n\n    // Chamada recursiva\n    printRecursaoPiramide(texto[1:len(texto)])\n    \n    // Armazenar o resultado na stack, para imprimir os resultados em ordem invertida\n    fmt.Println(texto)\n\n}\n\n\nfunc main() {\n    \n    var texto string\n\n    fmt.Scanln(&texto)\n\n    printRecursaoPiramide(texto)\n    \n}\n",
+            "lines": "28"
         }
     ]
 }

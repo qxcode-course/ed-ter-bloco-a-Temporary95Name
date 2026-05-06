@@ -22,6 +22,7 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@rec
 - ed@vector
 flags:
   inbox: all
@@ -30,5 +31,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@vetbuild
-selected_index: 5
+selected: ed@sufixos
+selected_index: 17
