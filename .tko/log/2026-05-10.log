@@ -1,0 +1,35 @@
+2026-05-10 01:18:01, MOVE, v:1, k:ed@padroes2, mode:PICK
+2026-05-10 01:18:36, MOVE, v:1, k:ed@padroes2, mode:BACK
+2026-05-10 01:18:37, MOVE, v:1, k:ed@padroes2, mode:PICK
+2026-05-10 01:18:59, MOVE, v:1, k:ed@padroes2, mode:PICK
+2026-05-10 01:19:56, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:11
+2026-05-10 01:20:06, EXEC, v:1, k:ed@padroes2, mode:FULL, size:11, fail:COMP
+2026-05-10 01:20:11, EXEC, v:1, k:ed@padroes2, mode:FULL, fail:COMP
+2026-05-10 01:20:21, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:11
+2026-05-10 01:20:31, EXEC, v:1, k:ed@padroes2, mode:FULL, size:11, fail:COMP
+2026-05-10 01:20:53, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:100, size:13
+2026-05-10 01:23:49, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:13
+2026-05-10 01:23:57, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:13
+2026-05-10 01:23:55, MOVE, v:1, k:ed@padroes2, mode:EDIT
+2026-05-10 01:23:56, MOVE, v:1, k:ed@padroes2, mode:EDIT
+2026-05-10 01:24:10, EXEC, v:1, k:ed@padroes2, mode:FULL, size:14, fail:COMP
+2026-05-10 01:24:12, EXEC, v:1, k:ed@padroes2, mode:FULL, fail:COMP
+2026-05-10 01:24:14, EXEC, v:1, k:ed@padroes2, mode:FULL, fail:COMP
+2026-05-10 01:24:17, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:100, size:14
+2026-05-10 01:24:29, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:100, size:14
+2026-05-10 01:24:40, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:14
+2026-05-10 01:25:06, EXEC, v:1, k:ed@padroes2, mode:FULL, size:14, fail:COMP
+2026-05-10 01:25:58, MOVE, v:1, k:ed@padroes2, mode:BACK
+2026-05-10 01:26:03, MOVE, v:1, k:ed@padroes2, mode:PICK
+2026-05-10 01:26:04, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:100, size:14
+2026-05-10 01:26:28, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:100
+2026-05-10 01:26:02, MOVE, v:1, k:ed@padroes2, mode:EDIT
+2026-05-10 01:26:27, MOVE, v:1, k:ed@padroes2, mode:EDIT
+2026-05-10 01:29:45, MOVE, v:1, k:ed@padroes2, mode:BACK
+2026-05-10 01:29:50, MOVE, v:1, k:ed@padroes3, mode:PICK
+2026-05-10 01:30:32, MOVE, v:1, k:ed@padroes3, mode:PICK
+2026-05-10 01:31:32, EXEC, v:1, k:ed@padroes3, mode:FULL, rate:0, size:5
+2026-05-10 01:31:30, MOVE, v:1, k:ed@padroes3, mode:EDIT
+2026-05-10 01:39:02, MOVE, v:1, k:ed@padroes3, mode:BACK
+2026-05-10 01:39:34, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-10 01:42:44, MOVE, v:1, k:ed@vetbuild, mode:BACK

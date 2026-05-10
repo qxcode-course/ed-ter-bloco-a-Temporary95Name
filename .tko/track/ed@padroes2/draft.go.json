@@ -2,8 +2,73 @@
     "patches": [
         {
             "label": "2026-03-14_01-12-46",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"qxcode\")\n}\n",
+            "content": "@@ -1,64 +1,4 @@\n-// equacao para a resposta e: (n elevado a 2) + (n vezes 2)%0A\n pack\n@@ -37,44 +37,8 @@\n ) %7B%0A\n-%0A    var n int%0A%0A    fmt.Scanln(&n)%0A%0A\n     \n@@ -54,24 +54,15 @@\n ln(%22\n-%25d%22, (n*n)+(n*2)\n+qxcode%22\n )%0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-05-10_01-19-56",
+            "content": "@@ -149,10 +149,12 @@\n tln(\n+%22\n %25d\n+%22\n , (n\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-05-10_01-20-06",
+            "content": "@@ -149,12 +149,10 @@\n tln(\n-%22\n %25d\n-%22\n , (n\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-05-10_01-20-21",
+            "content": "@@ -149,10 +149,12 @@\n tln(\n+%22\n %25d\n+%22\n , (n\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-05-10_01-20-31",
+            "content": "@@ -137,59 +137,35 @@\n     \n-resultado := (n*n)+(n*2)%0A%0A    fmt.Println(resultado\n+fmt.Println(%25d, (n*n)+(n*2)\n )%0A%7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-05-10_01-20-53",
+            "content": "@@ -136,11 +136,8 @@\n %0A   \n- //\n  res\n@@ -176,27 +176,20 @@\n rint\n-f(%22%25d%22, (n*n)+(n*2)\n+ln(resultado\n )%0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-05-10_01-23-49",
+            "content": "@@ -184,10 +184,8 @@\n (%22%25d\n-%5Cn\n %22, (\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-05-10_01-23-56",
+            "content": "@@ -180,16 +180,18 @@\n intf(%22%25d\n+%5Cn\n %22, (n*n)\n@@ -202,22 +202,6 @@\n 2))%0A\n-    fmt.Println%0A\n %7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-05-10_01-24-10",
+            "content": "@@ -211,13 +211,11 @@\n .Println\n-()\n %0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-05-10_01-24-17",
+            "content": "@@ -213,14 +213,11 @@\n rint\n-f(%22%5Cn%22\n+ln(\n )%0A%7D%0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-05-10_01-24-29",
+            "content": "@@ -180,18 +180,16 @@\n intf(%22%25d\n-%5Cn\n %22, (n*n)\n@@ -199,19 +199,16 @@\n *2))%0A   \n- //\n  fmt.Pri\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-05-10_01-24-40",
+            "content": "@@ -184,11 +184,8 @@\n (%22%25d\n-%22 %22\n %5Cn%22,\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-05-10_01-25-06",
+            "content": "@@ -180,16 +180,19 @@\n intf(%22%25d\n+%22 %22\n %5Cn%22, (n*\n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-05-10_01-26-04",
+            "content": "// equacao para a resposta e: (n elevado a 2) + (n vezes 2)\npackage main\nimport \"fmt\"\nfunc main() {\n\n    var n int\n\n    fmt.Scanln(&n)\n\n    // resultado := (n*n)+(n*2)\n\n    fmt.Printf(\"%d\\n\", (n*n)+(n*2))\n    // fmt.Printf(\"\\n\")\n}\n",
+            "lines": "14"
         }
     ]
 }
