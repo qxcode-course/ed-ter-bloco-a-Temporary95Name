@@ -67,8 +67,103 @@
         },
         {
             "label": "2026-05-10_01-26-04",
-            "content": "// equacao para a resposta e: (n elevado a 2) + (n vezes 2)\npackage main\nimport \"fmt\"\nfunc main() {\n\n    var n int\n\n    fmt.Scanln(&n)\n\n    // resultado := (n*n)+(n*2)\n\n    fmt.Printf(\"%d\\n\", (n*n)+(n*2))\n    // fmt.Printf(\"\\n\")\n}\n",
+            "content": "@@ -57,34 +57,8 @@\n  2)%0A\n-// Ainda nao usa recursao%0A\n pack\n@@ -66,17 +66,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -83,144 +83,42 @@\n mt%22%0A\n-%0A\n func \n-recPadrao (n int\n+main(\n ) %7B%0A%0A\n-%09if n == (n*n) + (n * 2) %7B%0A%09%09return%0A%09%7D%0A%0A%09recPadrao(n)%0A%0A%09fmt.Printf(%22%25d%22, n)%0A%7D%0A%0A%0A%0Afunc main() %7B%0A%0A%09var n int%0A%0A%09\n+    var n int%0A%0A    \n fmt.\n@@ -129,17 +129,20 @@\n ln(&n)%0A%0A\n-%09\n+    \n // resul\n@@ -162,17 +162,20 @@\n +(n*2)%0A%0A\n-%09\n+    \n fmt.Prin\n@@ -198,17 +198,20 @@\n +(n*2))%0A\n-%09\n+    \n // fmt.P\n@@ -225,22 +225,7 @@\n %5Cn%22)\n-%0A%0A%09recPadrao(n)\n %0A%7D%0A\n",
             "lines": "14"
+        },
+        {
+            "label": "2026-05-12_00-50-17",
+            "content": "@@ -129,20 +129,16 @@\n  (n int)\n- int\n  %7B%0A%0A%09if \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-12_00-50-38",
+            "content": "@@ -129,16 +129,20 @@\n  (n int)\n+ int\n  %7B%0A%0A%09if \n@@ -193,19 +193,16 @@\n ao(n)%0A%0A%09\n-// \n fmt.Prin\n@@ -217,24 +217,8 @@\n  n)%0A\n-%09fmt.Println(n)%0A\n %7D%0A%0A%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-05-12_00-51-24",
+            "content": "@@ -142,17 +142,16 @@\n if n == \n-(\n (n*n) + \n@@ -157,17 +157,16 @@\n  (n * 2)\n-)\n  %7B%0A%09%09ret\n@@ -213,19 +213,16 @@\n d%22, n)%0A%09\n-// \n fmt.Prin\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-12_00-52-16",
+            "content": "@@ -191,12 +191,8 @@\n ao(n\n- + n\n )%0A%0A%09\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-12_00-54-05",
+            "content": "@@ -142,16 +142,17 @@\n if n == \n+(\n (n*n) + \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-12_00-54-13",
+            "content": "@@ -142,17 +142,16 @@\n if n == \n-(\n (n*n) + \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-12_00-54-32",
+            "content": "@@ -154,19 +154,19 @@\n n) + (n \n-+ n\n+* 2\n )) %7B%0A%09%09r\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-12_00-55-08",
+            "content": "@@ -313,27 +313,24 @@\n *n)+(n*2)%0A%0A%09\n-// \n fmt.Printf(%22\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-12_00-55-31",
+            "content": "@@ -166,25 +166,8 @@\n ) %7B%0A\n-%09%09fmt.Println(n)%0A\n %09%09re\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-05-12_00-55-51",
+            "content": "@@ -181,16 +181,22 @@\n ln(n)%0A%09%09\n+return\n %0A%09%7D%0A%0A%09re\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-05-12_00-56-56",
+            "content": "@@ -177,21 +177,16 @@\n rint\n-f\n+ln\n (n)%0A%09%09\n-return\n %0A%09%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-05-12_00-57-25",
+            "content": "@@ -171,30 +171,24 @@\n %09fmt.Printf(\n-%22%25d%22, \n n)%0A%09%09return%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-05-12_00-57-39",
+            "content": "@@ -133,37 +133,16 @@\n int) %7B%0A%0A\n-%09fmt.Printf(%22%25d%22, n)%0A\n %09if n ==\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-05-12_00-57-48",
+            "content": "@@ -134,19 +134,16 @@\n nt) %7B%0A%0A%09\n-// \n fmt.Prin\n@@ -164,9 +164,10 @@\n f n \n-%3C\n+==\n  ((n\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-12_00-58-16",
+            "content": "@@ -222,18 +222,10 @@\n n%0A%09%7D\n- else  %7B%0A%09\n+%0A%0A\n %09rec\n@@ -238,18 +238,16 @@\n (n + n)%0A\n-%09%7D\n %0A%09// fmt\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-12_00-58-58",
+            "content": "@@ -187,19 +187,16 @@\n n)) %7B%0A%09%09\n-// \n fmt.Prin\n@@ -213,37 +213,14 @@\n )%0A%09%09\n-// \n return\n-%0A%0A%09%09recPadrao(n + n)\n %0A%09%7D \n@@ -229,19 +229,16 @@\n se  %7B%0A%09%09\n-// \n recPadra\n@@ -246,38 +246,16 @@\n (n + n)%0A\n-%09%09fmt.Printf(%22%25d%22, n)%0A\n %09%7D%0A%09// f\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-05-12_01-00-17",
+            "content": "@@ -250,16 +250,17 @@\n %09%7D else \n+ \n %7B%0A%09%09// r\n@@ -301,17 +301,8 @@\n  n)%0A\n-%09%09return%0A\n %09%7D%0A%09\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-12_01-01-00",
+            "content": "@@ -242,25 +242,16 @@\n (n + n)%0A\n-%09%09return%0A\n %09%7D else \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-05-12_01-01-39",
+            "content": "// equacao para a resposta e: (n elevado a 2) + (n vezes 2)\n// Ainda nao usa recursao\npackage main\n\nimport \"fmt\"\n\nfunc recPadrao (n int) {\n\n\t// fmt.Printf(\"%d\", n)\n\tif n < ((n*n) + (n + n)) {\n\t\t// fmt.Printf(\"%d\", n)\n\t\t// return\n\n\t\trecPadrao(n + n)\n\t\treturn\n\t} else {\n\t\t// recPadrao(n + n)\n\t\tfmt.Printf(\"%d\", n)\n\t\treturn\n\t}\n\t// fmt.Printf(\"%d\", n)\n\t// fmt.Println(n)\n}\n\n\n\nfunc main() {\n\n\tvar n int\n\n\tfmt.Scanln(&n)\n\n\t// resultado := (n*n)+(n*2)\n\n\t// fmt.Printf(\"%d\\n\", (n*n)+(n*2))\n\t// fmt.Printf(\"\\n\")\n\n\trecPadrao(n)\n}\n",
+            "lines": "39"
         }
     ]
 }

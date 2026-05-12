@@ -1,0 +1,28 @@
+2026-05-12 00:46:36, MOVE, v:1, k:ed@padroes2, mode:PICK
+2026-05-12 00:47:03, MOVE, v:1, k:ed@padroes2, mode:PICK
+2026-05-12 00:50:17, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:32
+2026-05-12 00:50:38, EXEC, v:1, k:ed@padroes2, mode:FULL, size:32, fail:COMP
+2026-05-12 00:51:24, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:33
+2026-05-12 00:51:56, MOVE, v:1, k:ed@padroes2, mode:EDIT
+2026-05-12 00:51:22, MOVE, v:1, k:ed@padroes2, mode:EDIT
+2026-05-12 00:52:16, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:33
+2026-05-12 00:54:05, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:100, size:33
+2026-05-12 00:54:13, EXEC, v:1, k:ed@padroes2, mode:FULL, size:33, fail:COMP
+2026-05-12 00:54:32, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:100, size:33
+2026-05-12 00:55:08, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:100, size:33
+2026-05-12 00:55:31, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:33
+2026-05-12 00:55:51, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:34
+2026-05-12 00:56:57, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:34
+2026-05-12 00:56:54, MOVE, v:1, k:ed@padroes2, mode:EDIT
+2026-05-12 00:56:54, MOVE, v:1, k:ed@padroes2, mode:EDIT
+2026-05-12 00:57:25, EXEC, v:1, k:ed@padroes2, mode:FULL, size:34, fail:COMP
+2026-05-12 00:57:39, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:34
+2026-05-12 00:57:48, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:35
+2026-05-12 00:58:16, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:35
+2026-05-12 00:58:59, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:34
+2026-05-12 01:00:17, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:37
+2026-05-12 01:01:00, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:38
+2026-05-12 01:01:39, EXEC, v:1, k:ed@padroes2, mode:FULL, rate:0, size:39
+2026-05-12 01:02:01, MOVE, v:1, k:ed@padroes2, mode:EDIT
+2026-05-12 01:01:38, MOVE, v:1, k:ed@padroes2, mode:EDIT
+2026-05-12 01:03:36, MOVE, v:1, k:ed@padroes2, mode:BACK
