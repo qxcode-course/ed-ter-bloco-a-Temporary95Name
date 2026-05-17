@@ -1,0 +1,10 @@
+2026-05-17 01:27:19, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-05-17 01:27:36, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-05-17 01:28:11, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-05-17 01:28:29, MOVE, v:1, k:ed@quadrado, mode:PICK
+2026-05-17 01:34:45, MOVE, v:1, k:ed@quadrado, mode:PICK
+2026-05-17 01:40:51, EXEC, v:1, k:ed@quadrado, mode:FULL, rate:100, size:42
+2026-05-17 01:40:48, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-05-17 01:40:51, MOVE, v:1, k:ed@quadrado, mode:EDIT
+2026-05-17 01:44:57, MOVE, v:1, k:ed@quadrado, mode:BACK
+2026-05-17 01:45:29, SELF, v:1, k:ed@quadrado, self:1, rate:100, study:5

@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-17_01-40-51",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\n// Fun\u00e7\u00e3o recursiva que calcula n^2 e imprime o passo a passo\nfunc calcularQuadrado(n int) int {\n\t// Caso Base\n\tif n == 1 {\n\t\tfmt.Println(\"1^2 = 1\")\n\t\treturn 1\n\t}\n\n\t// 1. Fase de Descida: Imprime a express\u00e3o com '?'\n\tfmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = ?\\n\", n, n-1, n-1)\n\n\t// Chamada recursiva para obter o valor de (n-1)^2\n\tquadradoAnterior := calcularQuadrado(n - 1)\n\n\t// C\u00e1lculo do valor atual baseado na f\u00f3rmula de Arag\u00e3o\n\tresultadoAtual := quadradoAnterior + 2*(n-1) + 1\n\n\t// 2. Fase de Subida: Imprime a express\u00e3o resolvida com o resultado\n\tfmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = %d\\n\", n, n-1, n-1, resultadoAtual)\n\n\treturn resultadoAtual\n}\n\nfunc main() {\n\tvar n int\n\t// Lendo a entrada do usu\u00e1rio\n\t_, err := fmt.Scan(&n)\n\tif err != nil {\n\t\treturn\n\t}\n\n\t// Garante que o programa funcione corretamente para n >= 1\n\tif n >= 1 {\n\t\tcalcularQuadrado(n)\n\t}\n}\n",
+            "lines": "42"
+        }
+    ]
+}

@@ -1,28 +1,23 @@
 // equacao para a resposta e: (n elevado a 2) + (n vezes 2)
-// Ainda nao usa recursao
+// nao sei se o codigo pode ser aceito ou completo ou correto.
 package main
 
 import "fmt"
 
-func recPadrao (n int) {
+func recPadrao2(n, originalN int) {
 
-	// fmt.Printf("%d", n)
-	if n == (n*n) + (n + n) {
-		// fmt.Printf("%d", n)
-		// return
+	if n < (originalN*originalN)+originalN+originalN {
 
+		recPadrao2(n+originalN, originalN)
 
-		recPadrao(n + n)
 	} else {
-		// recPadrao(n + n)
-		fmt.Printf("%d", n)
+
+		fmt.Printf("%d\n", n)
 		return
+
 	}
-	// fmt.Printf("%d", n)
-	// fmt.Println(n)
+
 }
-
-
 
 func main() {
 
@@ -35,5 +30,5 @@ func main() {
 	// fmt.Printf("%d\n", (n*n)+(n*2))
 	// fmt.Printf("\n")
 
-	recPadrao(n)
+	recPadrao2(n, n)
 }
