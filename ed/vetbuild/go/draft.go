@@ -4,8 +4,53 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
 	"strings"
 )
+
+
+
+// Feito pelo video da aula gravada
+type Vector struct {
+	data[] int
+	size int
+	capacity int
+}
+
+
+
+// Feito pelo video da aula gravada "ed man s08e01 vector"
+func NewVector(capacity int) *Vector {
+	return &Vector {
+		data: make([]int, capacity),
+		size: 0,
+		capacity: capacity,
+	}
+}
+
+
+
+// Feito pelo video da aula gravada "ed man s08e01 vector"
+func (vec *Vector) String() string {
+	return "[" + Join(vec.data[0:vec.size], ", ") + "]"
+}
+
+
+
+// Feito pelo video da aula gravada "ed man s08e01 vector"
+func (vec *Vector) Status() string {
+	return fmt.Sprintf("size:%v capacity:%v", vec.size, vec.capacity)
+}
+
+
+
+// Feito pelo video da aula gravada "ed man s08e01 vector"
+func (vec *Vector) PushBack(valor int) {
+	vec.data[vec.size] = valor
+	vec.size += 1
+}
+
+
 
 func Join(slice []int, sep string) string {
 	if len(slice) == 0 {
@@ -18,11 +63,13 @@ func Join(slice []int, sep string) string {
 	return result
 }
 
+
+
 func main() {
 	var line, cmd string
 	scanner := bufio.NewScanner(os.Stdin)
 
-	// v := NewVector(0)
+	v := NewVector(0)
 	for {
 		fmt.Print("$")
 		if !scanner.Scan() {
@@ -40,17 +87,17 @@ func main() {
 		case "end":
 			return
 		case "init":
-			// value, _ := strconv.Atoi(parts[1])
-			// v = NewVector(value)
+			value, _ := strconv.Atoi(parts[1])
+			v = NewVector(value)
 		case "push":
-			// for _, part := range parts[1:] {
-			// 	value, _ := strconv.Atoi(part)
-			// 	v.PushBack(value)
-			// }
+			for _, part := range parts[1:] {
+				value, _ := strconv.Atoi(part)
+				v.PushBack(value)
+			}
 		case "show":
-			// fmt.Println(v)
+			fmt.Println(v)
 		case "status":
-			// fmt.Println(v.Status())
+			fmt.Println(v.Status())
 		case "pop":
 			// err := v.PopBack()
 			// if err != nil {
