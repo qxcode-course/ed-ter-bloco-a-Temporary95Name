@@ -10,7 +10,7 @@ import (
 
 
 
-// Feito pelo video da aula gravada
+// Feito pelo video da aula gravada "ed man s08e01 vector"
 type Vector struct {
 	data[] int
 	size int
@@ -48,6 +48,15 @@ func (vec *Vector) Status() string {
 func (vec *Vector) PushBack(valor int) {
 	vec.data[vec.size] = valor
 	vec.size += 1
+}
+
+
+
+// value, _ := strconv.Atoi(parts[1])
+// index := v.IndexOf(value)
+// fmt.Println(index)
+func (vec *Vector) IndexOf(valor int) {
+	
 }
 
 
@@ -117,9 +126,9 @@ func main() {
 			// 	fmt.Println(err)
 			// }
 		case "indexOf":
-			// value, _ := strconv.Atoi(parts[1])
-			// index := v.IndexOf(value)
-			// fmt.Println(index)
+			value, _ := strconv.Atoi(parts[1])
+			index := v.IndexOf(value)
+			fmt.Println(index)
 		case "contains":
 			// value, _ := strconv.Atoi(parts[1])
 			// if v.Contains(value) {
