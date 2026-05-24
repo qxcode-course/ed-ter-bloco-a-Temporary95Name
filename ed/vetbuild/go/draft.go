@@ -44,19 +44,60 @@ func (vec *Vector) Status() string {
 
 
 
+/*
 // Feito pelo video da aula gravada "ed man s08e01 vector"
 func (vec *Vector) PushBack(valor int) {
 	vec.data[vec.size] = valor
 	vec.size += 1
 }
+*/
+// Feito pelo video da aula gravada "ed man s08e01 vector"
+func (vec *Vector) PushBack(valor int) error {
+	if vec.size < vec.capacity {
+		vec.data[vec.size] = valor
+		vec.size += 1
+		return nil
+	}
+
+	return fmt.Errorf("")
+}
 
 
 
+/*
 // value, _ := strconv.Atoi(parts[1])
 // index := v.IndexOf(value)
 // fmt.Println(index)
 func (vec *Vector) IndexOf(valor int) {
 	
+}
+*/
+func (vec *Vector) IndexOf(valor int) {
+	// var a int = 0
+
+	for i := 0; i < vec.size; i++ {
+		if vec.data[i] == valor {
+			return i
+		} 
+
+	}
+}
+
+
+
+// Feito pelo video da aula gravada "edm s05e01 vetbuild"
+func (v *Vector) Reserve(capacity int) {
+	if capacity < v.size {
+		return
+	}
+
+	novo := make([]int, capacity)
+	for i := range v.size {
+		novo[i] = v.data[i]
+	}
+
+	v.capacity = capacity
+	v.data = novo
 }
 
 
@@ -99,10 +140,18 @@ func main() {
 			value, _ := strconv.Atoi(parts[1])
 			v = NewVector(value)
 		case "push":
+			// for _, part := range parts[1:] {
+			// 	value, _ := strconv.Atoi(part)
+			// 	v.PushBack(value)
+			// }
 			for _, part := range parts[1:] {
-				value, _ := strconv.Atoi(part)
-				v.PushBack(value)
+			value, _ := strconv.Atoi(part)
+			err := v.PushBack(value)
+			if err != nil {
+				fmt.Println(err)
 			}
+		}
+
 		case "show":
 			fmt.Println(v)
 		case "status":
@@ -126,9 +175,9 @@ func main() {
 			// 	fmt.Println(err)
 			// }
 		case "indexOf":
-			value, _ := strconv.Atoi(parts[1])
-			index := v.IndexOf(value)
-			fmt.Println(index)
+			// value, _ := strconv.Atoi(parts[1])
+			// index := v.IndexOf(value)
+			// fmt.Println(index)
 		case "contains":
 			// value, _ := strconv.Atoi(parts[1])
 			// if v.Contains(value) {
@@ -159,6 +208,8 @@ func main() {
 		case "reserve":
 			// newCapacity, _ := strconv.Atoi(parts[1])
 			// v.Reserve(newCapacity)
+			newCapacity, _ := strconv.Atoi(parts[1])
+			v.Reserve(newCapacity)
 		default:
 			fmt.Println("fail: comando invalido")
 		}

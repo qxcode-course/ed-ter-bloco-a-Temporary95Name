@@ -19,8 +19,8 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
 - ed@rec
+- ed@list
 - ed@vector
 flags:
   inbox: all
