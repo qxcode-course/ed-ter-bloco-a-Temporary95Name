@@ -20,8 +20,8 @@ sources:
   quests: null
 expanded:
 - ed@rec
-- ed@list
 - ed@vector
+- ed@list
 flags:
   inbox: all
   panel: graph

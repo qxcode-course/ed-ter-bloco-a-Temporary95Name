@@ -8,41 +8,31 @@ import (
 	"strings"
 )
 
-
-
 // Feito pelo video da aula gravada "ed man s08e01 vector"
 type Vector struct {
-	data[] int
-	size int
+	data     []int
+	size     int
 	capacity int
 }
 
-
-
 // Feito pelo video da aula gravada "ed man s08e01 vector"
 func NewVector(capacity int) *Vector {
-	return &Vector {
-		data: make([]int, capacity),
-		size: 0,
+	return &Vector{
+		data:     make([]int, capacity),
+		size:     0,
 		capacity: capacity,
 	}
 }
-
-
 
 // Feito pelo video da aula gravada "ed man s08e01 vector"
 func (vec *Vector) String() string {
 	return "[" + Join(vec.data[0:vec.size], ", ") + "]"
 }
 
-
-
 // Feito pelo video da aula gravada "ed man s08e01 vector"
 func (vec *Vector) Status() string {
 	return fmt.Sprintf("size:%v capacity:%v", vec.size, vec.capacity)
 }
-
-
 
 /*
 // Feito pelo video da aula gravada "ed man s08e01 vector"
@@ -62,28 +52,29 @@ func (vec *Vector) PushBack(valor int) error {
 	return fmt.Errorf("")
 }
 
-
-
-/*
-// value, _ := strconv.Atoi(parts[1])
-// index := v.IndexOf(value)
-// fmt.Println(index)
-func (vec *Vector) IndexOf(valor int) {
-	
-}
-*/
-func (vec *Vector) IndexOf(valor int) {
+// Feito com ajuda do Professor David Sena via Discord.
+func (vec *Vector) IndexOf(valor int) int {
 	// var a int = 0
 
-	for i := 0; i < vec.size; i++ {
+	for i := range vec.size {
 		if vec.data[i] == valor {
 			return i
-		} 
-
+		}
 	}
+	return -1
 }
 
+// Feito modificando a funcao "IndexOf", que foi feita com a ajuda do Professor David Sena via Discord.
+func (vec *Vector) Contains(valor int) bool {
 
+	for i := range vec.size {
+		if vec.data[i] == valor {
+			return true
+		}
+	}
+	return false
+
+}
 
 // Feito pelo video da aula gravada "edm s05e01 vetbuild"
 func (v *Vector) Reserve(capacity int) {
@@ -100,8 +91,6 @@ func (v *Vector) Reserve(capacity int) {
 	v.data = novo
 }
 
-
-
 func Join(slice []int, sep string) string {
 	if len(slice) == 0 {
 		return ""
@@ -112,8 +101,6 @@ func Join(slice []int, sep string) string {
 	}
 	return result
 }
-
-
 
 func main() {
 	var line, cmd string
@@ -145,12 +132,12 @@ func main() {
 			// 	v.PushBack(value)
 			// }
 			for _, part := range parts[1:] {
-			value, _ := strconv.Atoi(part)
-			err := v.PushBack(value)
-			if err != nil {
-				fmt.Println(err)
+				value, _ := strconv.Atoi(part)
+				err := v.PushBack(value)
+				if err != nil {
+					fmt.Print(err) // antes usava fmt.Println
+				}
 			}
-		}
 
 		case "show":
 			fmt.Println(v)
@@ -178,6 +165,9 @@ func main() {
 			// value, _ := strconv.Atoi(parts[1])
 			// index := v.IndexOf(value)
 			// fmt.Println(index)
+			value, _ := strconv.Atoi(parts[1])
+			index := v.IndexOf(value)
+			fmt.Println(index)
 		case "contains":
 			// value, _ := strconv.Atoi(parts[1])
 			// if v.Contains(value) {
@@ -185,6 +175,12 @@ func main() {
 			// } else {
 			// 	fmt.Println("false")
 			// }
+			value, _ := strconv.Atoi(parts[1])
+			if v.Contains(value) {
+				fmt.Println("true")
+			} else {
+				fmt.Println("false")
+			}
 		case "clear":
 			// v.Clear()
 		case "capacity":
