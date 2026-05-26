@@ -15,6 +15,8 @@ type Vector struct {
 	capacity int
 }
 
+/**/
+
 // Feito pelo video da aula gravada "ed man s08e01 vector"
 func NewVector(capacity int) *Vector {
 	return &Vector{
@@ -23,6 +25,8 @@ func NewVector(capacity int) *Vector {
 		capacity: capacity,
 	}
 }
+
+/**/
 
 // Feito pelo video da aula gravada "ed man s08e01 vector"
 func (vec *Vector) String() string {
@@ -34,6 +38,8 @@ func (vec *Vector) Status() string {
 	return fmt.Sprintf("size:%v capacity:%v", vec.size, vec.capacity)
 }
 
+/**/
+
 /*
 // Feito pelo video da aula gravada "ed man s08e01 vector"
 func (vec *Vector) PushBack(valor int) {
@@ -41,6 +47,7 @@ func (vec *Vector) PushBack(valor int) {
 	vec.size += 1
 }
 */
+/*
 // Feito pelo video da aula gravada "ed man s08e01 vector"
 func (vec *Vector) PushBack(valor int) error {
 	if vec.size < vec.capacity {
@@ -51,6 +58,18 @@ func (vec *Vector) PushBack(valor int) error {
 
 	return fmt.Errorf("")
 }
+*/
+// Feito pelo video da aula gravada "edm s05e02 setbuild"
+func (vec *Vector) PushBack(valor int) error {
+	if vec.size == vec.capacity {
+		vec.Reserve(max(1, vec.capacity*2))
+	}
+	vec.data[vec.size] = valor
+	vec.size++
+	return nil
+}
+
+/**/
 
 // Feito com ajuda do Professor David Sena via Discord.
 func (vec *Vector) IndexOf(valor int) int {
@@ -64,6 +83,8 @@ func (vec *Vector) IndexOf(valor int) int {
 	return -1
 }
 
+/**/
+
 // Feito modificando a funcao "IndexOf", que foi feita com a ajuda do Professor David Sena via Discord.
 func (vec *Vector) Contains(valor int) bool {
 
@@ -75,6 +96,8 @@ func (vec *Vector) Contains(valor int) bool {
 	return false
 
 }
+
+/**/
 
 // Feito pelo video da aula gravada "edm s05e01 vetbuild"
 func (v *Vector) Reserve(capacity int) {
