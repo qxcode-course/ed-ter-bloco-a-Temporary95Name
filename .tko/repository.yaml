@@ -19,12 +19,17 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@bfs
+- ed@dfs
+- ed@vector
+- ed@linear
+- ed@tree
+- eval1@eval1
 - ed@rec
 - ed@list
-- ed@vector
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'

@@ -114,6 +114,24 @@ func (v *Vector) Reserve(capacity int) {
 	v.data = novo
 }
 
+/**/
+
+// func (v *Vector) Erase(capacity int) {
+//	return
+// }
+
+/**/
+
+// Feito com ajudo do Professor David Sena.
+func (v *Vector) Clear() {
+	v.size = 0
+}
+
+/**/
+
+
+
+
 func Join(slice []int, sep string) string {
 	if len(slice) == 0 {
 		return ""
@@ -206,6 +224,7 @@ func main() {
 			}
 		case "clear":
 			// v.Clear()
+			v.Clear()
 		case "capacity":
 			// fmt.Println(v.Capacity())
 		case "get":
