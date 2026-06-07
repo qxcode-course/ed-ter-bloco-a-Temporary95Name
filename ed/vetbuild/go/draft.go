@@ -100,18 +100,18 @@ func (vec *Vector) Contains(valor int) bool {
 /**/
 
 // Feito pelo video da aula gravada "edm s05e01 vetbuild"
-func (v *Vector) Reserve(capacity int) {
-	if capacity < v.size {
+func (vec *Vector) Reserve(capacity int) {
+	if capacity < vec.size {
 		return
 	}
 
 	novo := make([]int, capacity)
-	for i := range v.size {
-		novo[i] = v.data[i]
+	for i := range vec.size {
+		novo[i] = vec.data[i]
 	}
 
-	v.capacity = capacity
-	v.data = novo
+	vec.capacity = capacity
+	vec.data = novo
 }
 
 /**/
@@ -123,11 +123,24 @@ func (v *Vector) Reserve(capacity int) {
 /**/
 
 // Feito com ajudo do Professor David Sena.
-func (v *Vector) Clear() {
-	v.size = 0
+func (vec *Vector) Clear() {
+	vec.size = 0
 }
 
 /**/
+
+func (vec *Vector) Erase(valor int) error {
+	// if vec.size == vec.capacity {
+	// 	vec.Reserve(max(1, vec.capacity*2))
+	// }
+	// vec.data[vec.size] = valor
+	for i := valor; i < vec.capacity; i++ {
+		vec.data[i] = vec.data[i+1]
+	}
+	
+	vec.size--
+	return nil
+}
 
 
 
@@ -202,6 +215,11 @@ func main() {
 			// if err != nil {
 			// 	fmt.Println(err)
 			// }
+			index, _ := strconv.Atoi(parts[1])
+			err := v.Erase(index)
+			if err != nil {
+				fmt.Println(err)
+			}
 		case "indexOf":
 			// value, _ := strconv.Atoi(parts[1])
 			// index := v.IndexOf(value)

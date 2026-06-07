@@ -19,13 +19,13 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@bfs
-- ed@dfs
-- ed@vector
-- ed@linear
-- ed@tree
-- eval1@eval1
 - ed@rec
+- ed@linear
+- eval1@eval1
+- ed@vector
+- ed@bfs
+- ed@tree
+- ed@dfs
 - ed@list
 flags:
   inbox: all
@@ -35,4 +35,4 @@ flags:
   show_time: 'true'
 lang: go
 selected: ed@vetbuild
-selected_index: 29
+selected_index: 28
