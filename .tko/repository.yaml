@@ -19,14 +19,14 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@vector
 - ed@rec
 - ed@linear
-- eval1@eval1
-- ed@vector
-- ed@bfs
-- ed@tree
 - ed@dfs
+- ed@tree
 - ed@list
+- ed@bfs
+- eval1@eval1
 flags:
   inbox: all
   panel: skills
@@ -34,5 +34,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@vetbuild
-selected_index: 28
+selected: ed@lista_d2
+selected_index: 36
